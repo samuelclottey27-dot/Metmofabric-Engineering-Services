@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Metmofabric Engineering Services</title>
+<meta name="description" content="Metmofabric Engineering Services offers injection mould manufacturing, mould design, custom fabrication, prototyping, mould repair, and engineering consultation across West Africa.">
+<meta property="og:title" content="Services — Metmofabric Engineering Services"><meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111214;--surface:#1a1b1e;--surface-2:#202226;--teal:#f97316;--teal-mid:#e8650f;--teal-dim:rgba(249,115,22,.12);--teal-border:rgba(249,115,22,.28);--amber:#f59e0b;--white:#eef4fb;--text:#8da8c4;--border:rgba(255,255,255,.06);--font-head:'Barlow Condensed',sans-serif;--font-body:'Manrope',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;}
+.top-bar{background:var(--teal);padding:.45rem 5%;display:flex;justify-content:space-between;font-size:.78rem;font-weight:600;color:var(--bg);}
+.top-bar a{color:var(--bg);text-decoration:none;font-weight:700;}
+nav{position:sticky;top:0;z-index:999;background:rgba(17,18,20,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:76px;}
+.nav-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
+.nav-logo-mark{width:42px;height:42px;border:2px solid var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--teal);background:var(--teal-dim);}
+.nav-logo-text{font-family:var(--font-head);font-weight:700;font-size:1rem;color:var(--white);line-height:1.1;}
+.nav-logo-text span{display:block;font-size:.6rem;color:var(--teal);letter-spacing:2px;text-transform:uppercase;font-family:var(--font-body);font-weight:600;}
+nav ul{list-style:none;display:flex;gap:2.5rem;}
+nav ul a{color:var(--text);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;}
+nav ul a:hover,nav ul a.active{color:var(--teal);}
+.nav-quote{border:1.5px solid var(--teal)!important;color:var(--teal)!important;padding:.5rem 1.4rem;border-radius:6px;font-weight:600!important;}
+.nav-quote:hover{background:var(--teal)!important;color:var(--bg)!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
+.page-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:5rem 5% 4rem;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.03) 1px,transparent 1px);background-size:60px 60px;}
+.page-hero-inner{position:relative;z-index:1;}
+.breadcrumb{font-size:.78rem;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem;}
+.breadcrumb a{color:var(--teal);text-decoration:none;}
+.breadcrumb span{opacity:.5;}
+.page-title{font-family:var(--font-head);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);letter-spacing:-2px;line-height:1;margin-bottom:1rem;}
+.page-title .hl{color:var(--teal);}
+.page-sub{color:var(--text);font-size:1.05rem;max-width:580px;line-height:1.8;}
+section{padding:5rem 5%;}
+.sec-label{display:flex;align-items:center;gap:.75rem;color:var(--teal);font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;}
+.sec-label::before{content:'';width:28px;height:2px;background:var(--teal);}
+.sec-title{font-family:var(--font-head);font-weight:800;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);line-height:1.1;margin-bottom:1rem;letter-spacing:-1px;}
+.sec-title .hl{color:var(--teal);}
+.sec-body{color:var(--text);line-height:1.8;font-size:.95rem;}
+.btn-teal{background:var(--teal);color:var(--bg);padding:1rem 2.4rem;border-radius:8px;font-size:.95rem;font-weight:700;text-decoration:none;letter-spacing:.5px;transition:all .2s;display:inline-block;}
+.btn-teal:hover{background:var(--teal-mid);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.35);}
+.btn-outline{background:transparent;color:var(--white);padding:1rem 2rem;border-radius:8px;border:1.5px solid var(--border);font-size:.95rem;font-weight:500;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem;}
+.btn-outline:hover{border-color:var(--teal);color:var(--teal);}
+
+/* SERVICE CARDS DETAILED */
+.srv-list{display:flex;flex-direction:column;gap:2rem;margin-top:1rem;}
+.srv-detail{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:3rem;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:start;transition:border-color .25s;position:relative;overflow:hidden;}
+.srv-detail::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--teal),var(--amber));transform:scaleY(0);transform-origin:top;transition:transform .35s;}
+.srv-detail:hover{border-color:var(--teal-border);}
+.srv-detail:hover::before{transform:scaleY(1);}
+.srv-icon-lg{width:80px;height:80px;background:var(--teal-dim);border:1.5px solid var(--teal-border);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;}
+.srv-detail h3{font-family:var(--font-head);font-weight:800;font-size:1.4rem;color:var(--white);margin-bottom:.75rem;letter-spacing:-.5px;}
+.srv-detail p{color:var(--text);font-size:.93rem;line-height:1.8;margin-bottom:1.25rem;}
+.srv-features{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+.srv-feat{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:.3rem .85rem;border-radius:6px;font-size:.78rem;font-weight:600;}
+.srv-cta{display:inline-flex;align-items:center;gap:.5rem;color:var(--teal);text-decoration:none;font-weight:700;font-size:.88rem;margin-top:1.25rem;transition:gap .2s;}
+.srv-cta:hover{gap:.9rem;}
+
+/* INDUSTRIES */
+.industries{background:var(--surface);}
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2rem;}
+.ind-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.75rem;text-align:center;transition:all .25s;}
+.ind-card:hover{border-color:var(--teal-border);transform:translateY(-3px);}
+.ind-icon{font-size:2rem;margin-bottom:.9rem;}
+.ind-card h4{font-family:var(--font-head);font-weight:700;color:var(--white);font-size:.95rem;margin-bottom:.4rem;}
+.ind-card p{color:var(--text);font-size:.8rem;line-height:1.6;}
+
+/* PROCESS */
+.process{background:var(--bg);}
+.proc-accordion{display:flex;flex-direction:column;gap:.75rem;margin-top:2rem;}
+.proc-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .25s;}
+.proc-item:hover,.proc-item.open{border-color:var(--teal-border);}
+.proc-header{display:flex;align-items:center;gap:1.25rem;padding:1.4rem 1.75rem;cursor:pointer;}
+.proc-num{width:40px;height:40px;border:2px solid var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.9rem;color:var(--teal);flex-shrink:0;}
+.proc-header h4{font-family:var(--font-head);font-weight:700;color:var(--white);font-size:1.05rem;flex:1;}
+.proc-arrow{color:var(--teal);transition:transform .25s;font-size:1.2rem;}
+.proc-item.open .proc-arrow{transform:rotate(180deg);}
+.proc-body{padding:0 1.75rem 1.5rem 4.9rem;color:var(--text);font-size:.9rem;line-height:1.8;display:none;}
+.proc-item.open .proc-body{display:block;}
+
+/* CTA BAND */
+.srv-cta-band{background:var(--surface);border-top:1px solid var(--teal-border);border-bottom:1px solid var(--teal-border);padding:4.5rem 5%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem;}
+.srv-cta-band h2{font-family:var(--font-head);font-weight:800;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);letter-spacing:-1px;}
+.srv-cta-band h2 .hl{color:var(--teal);}
+.srv-cta-band p{color:var(--text);margin-top:.4rem;}
+
+footer{background:var(--surface);border-top:1px solid var(--border);}
+.footer-main{padding:3.5rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+.footer-brand p{color:var(--text);font-size:.85rem;line-height:1.7;margin-top:1rem;max-width:260px;}
+.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col ul a{color:var(--text);text-decoration:none;font-size:.85rem;transition:color .2s;}
+.footer-col ul a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid var(--border);padding:1.5rem 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;}
+.footer-bottom p{font-size:.8rem;color:var(--text);}
+.footer-bottom .owner{color:var(--teal);font-weight:600;}
+.footer-teal-bar{height:3px;background:linear-gradient(to right,var(--teal),var(--amber),var(--teal));}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+@media(max-width:900px){nav ul{display:none;}.nav-mobile-toggle{display:block;}.srv-detail{grid-template-columns:1fr;}.ind-grid{grid-template-columns:repeat(2,1fr);}.srv-cta-band{grid-template-columns:1fr;}.footer-main{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.ind-grid{grid-template-columns:1fr 1fr;}}
+</style>
+<style>
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;}
+.wa-bubble{width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;}
+.wa-bubble:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.6);}
+.wa-bubble svg{width:32px;height:32px;fill:#fff;}
+.wa-tooltip{background:#1a1b1e;color:#f4f4f5;font-family:'Manrope',sans-serif;font-size:.8rem;font-weight:600;padding:.45rem .9rem;border-radius:100px;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.35);opacity:0;transform:translateX(8px);transition:opacity .2s,transform .2s;pointer-events:none;border:1px solid rgba(249,115,22,.2);}
+.wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0);}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6;}100%{transform:scale(1.7);opacity:0;}}
+</style>
+</head>
+<body>
+<div class="top-bar"><span>⚙️ Metmofabric Engineering Services — Precision Mould Manufacturing</span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Find Our Workshop</a></div>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">ME</div><div class="nav-logo-text">Metmofabric<span>Engineering Services</span></div></a>
+  <ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html" class="nav-quote">Get a Quote</a></li></ul>
+  <button class="nav-mobile-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Services</div>
+    <h1 class="page-title">Our <span class="hl">Services</span></h1>
+    <p class="page-sub">Comprehensive mould manufacturing and engineering services — from initial concept through to delivery and ongoing maintenance support.</p>
+  </div>
+</div>
+
+<!-- SERVICES DETAILED -->
+<section>
+  <div class="reveal" style="margin-bottom:3rem">
+    <div class="sec-label">What We Offer</div>
+    <h2 class="sec-title">Complete <span class="hl">Engineering Solutions</span></h2>
+    <p class="sec-body" style="max-width:620px">Every service we provide is underpinned by our commitment to precision, quality, and client satisfaction. Here's a full breakdown of what Metmofabric delivers.</p>
+  </div>
+  <div class="srv-list">
+
+    <div class="srv-detail reveal">
+      <div class="srv-icon-lg">⚙️</div>
+      <div>
+        <h3>Injection Mould Manufacturing</h3>
+        <p>Our core capability — precision injection mould manufacturing to exact client specifications. Using modern CNC machining and EDM technology, we produce moulds with exceptional dimensional accuracy, superior surface finish, and long tool life. From simple single-cavity moulds to complex multi-cavity and hot runner systems.</p>
+        <p>Every mould undergoes rigorous inspection at multiple production stages, with a final full dimensional report provided on delivery.</p>
+        <div class="srv-features"><span class="srv-feat">Single & Multi-Cavity</span><span class="srv-feat">Hot Runner Systems</span><span class="srv-feat">CNC Machined</span><span class="srv-feat">EDM Finishing</span><span class="srv-feat">Dimensional Reports</span><span class="srv-feat">Steel & Aluminium</span></div>
+        <a href="contact.html" class="srv-cta">Request a Quote →</a>
+      </div>
+    </div>
+
+    <div class="srv-detail reveal">
+      <div class="srv-icon-lg">🔧</div>
+      <div>
+        <h3>Mould Design & Engineering</h3>
+        <p>Before a single tool touches metal, our engineering team creates precise CAD/CAM designs validated for manufacturability, performance, and longevity. We perform Design for Manufacturability (DFM) analysis to identify and resolve potential issues before production begins — saving clients significant time and cost.</p>
+        <p>Our design team works collaboratively with clients, providing regular design reviews and incorporating feedback at every stage.</p>
+        <div class="srv-features"><span class="srv-feat">3D CAD Design</span><span class="srv-feat">DFM Analysis</span><span class="srv-feat">CAM Programming</span><span class="srv-feat">Client Design Reviews</span><span class="srv-feat">Mould Flow Analysis</span><span class="srv-feat">Gate & Runner Optimisation</span></div>
+        <a href="contact.html" class="srv-cta">Request a Quote →</a>
+      </div>
+    </div>
+
+    <div class="srv-detail reveal">
+      <div class="srv-icon-lg">🏭</div>
+      <div>
+        <h3>Custom Fabrication</h3>
+        <p>Beyond moulds, Metmofabric offers comprehensive custom metal fabrication services for clients requiring bespoke industrial components. Precision machining, turning, milling, and fabrication of a wide variety of engineering components — to your exact specifications and material requirements.</p>
+        <div class="srv-features"><span class="srv-feat">CNC Turning & Milling</span><span class="srv-feat">Precision Machining</span><span class="srv-feat">Custom Tooling</span><span class="srv-feat">Jigs & Fixtures</span><span class="srv-feat">Steel & Alloys</span><span class="srv-feat">Drawing-to-Part</span></div>
+        <a href="contact.html" class="srv-cta">Request a Quote →</a>
+      </div>
+    </div>
+
+    <div class="srv-detail reveal">
+      <div class="srv-icon-lg">🔬</div>
+      <div>
+        <h3>Prototype Development</h3>
+        <p>Validate your product design before committing to full-scale mould production. Our rapid prototyping and sample mould service allows you to test form, fit, and function — identify design improvements — before the main tooling investment is made. This significantly reduces the risk of costly production mistakes.</p>
+        <div class="srv-features"><span class="srv-feat">Rapid Prototyping</span><span class="srv-feat">Sample Moulds</span><span class="srv-feat">Design Validation</span><span class="srv-feat">Fit & Function Testing</span><span class="srv-feat">Iterative Development</span></div>
+        <a href="contact.html" class="srv-cta">Request a Quote →</a>
+      </div>
+    </div>
+
+    <div class="srv-detail reveal">
+      <div class="srv-icon-lg">🛠️</div>
+      <div>
+        <h3>Mould Repair & Maintenance</h3>
+        <p>Extend the working life of your existing tooling with our expert mould refurbishment and maintenance services. Whether your mould has suffered production damage, wear, or simply needs a periodic overhaul to restore its original performance — our technicians provide fast, reliable repair with minimal production downtime.</p>
+        <div class="srv-features"><span class="srv-feat">Mould Refurbishment</span><span class="srv-feat">Weld Repair</span><span class="srv-feat">Polishing & Finishing</span><span class="srv-feat">Cavity Modification</span><span class="srv-feat">Preventative Maintenance</span><span class="srv-feat">Annual Service Contracts</span></div>
+        <a href="contact.html" class="srv-cta">Request a Quote →</a>
+      </div>
+    </div>
+
+    <div class="srv-detail reveal">
+      <div class="srv-icon-lg">📐</div>
+      <div>
+        <h3>Engineering Consultation</h3>
+        <p>Leverage decades of manufacturing expertise for your business without committing to a full production project. Our engineering consultations cover DFM reviews, mould cost estimation, material selection advice, process optimisation, and production planning — helping you make better engineering decisions at every stage.</p>
+        <div class="srv-features"><span class="srv-feat">DFM Consultations</span><span class="srv-feat">Cost Engineering</span><span class="srv-feat">Material Selection</span><span class="srv-feat">Process Optimisation</span><span class="srv-feat">Second Opinion Reviews</span><span class="srv-feat">Production Planning</span></div>
+        <a href="contact.html" class="srv-cta">Book a Consultation →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="reveal" style="text-align:center;max-width:650px;margin:0 auto 1rem">
+    <div class="sec-label" style="justify-content:center">Industries We Serve</div>
+    <h2 class="sec-title">Serving <span class="hl">Diverse Industries</span></h2>
+  </div>
+  <div class="ind-grid">
+    <div class="ind-card reveal"><div class="ind-icon">🏗️</div><h4>Construction & Building</h4><p>Precision moulds for construction components, fittings, and building products.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.07s"><div class="ind-icon">🍫</div><h4>FMCG & Packaging</h4><p>High-cavity moulds for consumer goods packaging and fast-moving products.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.14s"><div class="ind-icon">🚗</div><h4>Automotive</h4><p>Precision tooling for automotive components, trims, and structural parts.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.21s"><div class="ind-icon">🏥</div><h4>Healthcare & Medical</h4><p>Clean-specification moulds for medical device components and equipment housings.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.28s"><div class="ind-icon">💡</div><h4>Electronics</h4><p>Complex precision moulds for electronic housings, connectors, and components.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.35s"><div class="ind-icon">🌾</div><h4>Agriculture</h4><p>Durable moulds for agricultural equipment components and irrigation fittings.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.42s"><div class="ind-icon">⚡</div><h4>Industrial Equipment</h4><p>Heavy-duty tooling for industrial machinery components and assemblies.</p></div>
+    <div class="ind-card reveal" style="transition-delay:.49s"><div class="ind-icon">🎯</div><h4>Custom Projects</h4><p>Any industry. Any specification. Our engineers love a complex challenge.</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="reveal" style="text-align:center;max-width:650px;margin:0 auto 1rem">
+    <div class="sec-label" style="justify-content:center">Our Process</div>
+    <h2 class="sec-title">How We <span class="hl">Deliver Your Project</span></h2>
+  </div>
+  <div class="proc-accordion reveal" style="max-width:800px;margin:2rem auto 0;">
+    <div class="proc-item open"><div class="proc-header" onclick="toggleProc(this)"><div class="proc-num">01</div><h4>Initial Consultation & Brief</h4><div class="proc-arrow">▼</div></div><div class="proc-body">We begin every project with a thorough consultation — understanding your mould requirements, part geometry, material preferences, production volumes, and delivery timeline. This brief forms the foundation of your project plan.</div></div>
+    <div class="proc-item"><div class="proc-header" onclick="toggleProc(this)"><div class="proc-num">02</div><h4>Engineering Design & DFM Review</h4><div class="proc-arrow">▼</div></div><div class="proc-body">Our engineering team creates precise CAD designs and performs a Design for Manufacturability review to ensure your mould will perform reliably in production. We present the design for client approval before any machining begins.</div></div>
+    <div class="proc-item"><div class="proc-header" onclick="toggleProc(this)"><div class="proc-num">03</div><h4>Quotation & Project Plan</h4><div class="proc-arrow">▼</div></div><div class="proc-body">We provide a detailed, itemised quotation covering all materials, machining, and delivery costs — along with a clear project timeline with milestones. No surprises, no hidden costs.</div></div>
+    <div class="proc-item"><div class="proc-header" onclick="toggleProc(this)"><div class="proc-num">04</div><h4>Prototype & Validation</h4><div class="proc-arrow">▼</div></div><div class="proc-body">For new tooling projects, we produce a prototype mould or sample part for dimensional validation and client approval. Any required adjustments are made before full production commences.</div></div>
+    <div class="proc-item"><div class="proc-header" onclick="toggleProc(this)"><div class="proc-num">05</div><h4>Full Production Manufacturing</h4><div class="proc-arrow">▼</div></div><div class="proc-body">CNC machining, EDM, polishing, and assembly — with in-process quality checks at every stage. Our quality control team inspects against your specifications throughout production.</div></div>
+    <div class="proc-item"><div class="proc-header" onclick="toggleProc(this)"><div class="proc-num">06</div><h4>Final Inspection & Delivery</h4><div class="proc-arrow">▼</div></div><div class="proc-body">Every completed mould undergoes a final full dimensional inspection before dispatch, with a comprehensive quality report provided. We ensure your mould arrives safely, on time, and ready to run.</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="srv-cta-band">
+  <div class="reveal"><h2>Ready to Start? <span class="hl">Let's Talk.</span></h2><p>Get a free consultation and competitive quote — our engineers respond within 24 hours.</p></div>
+  <a href="contact.html" class="btn-teal reveal" style="white-space:nowrap">→ Request a Free Quote</a>
+</div>
+
+<div class="footer-teal-bar"></div>
+<footer>
+  <div class="footer-main"><div class="footer-brand"><a href="index.html" class="nav-logo" style="text-decoration:none"><div class="nav-logo-mark">ME</div><div class="nav-logo-text">Metmofabric<span>Engineering Services</span></div></a><p>Led by <strong style="color:var(--teal)">Mr. Clement N. C. Clottey</strong>.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Injection Moulds</a></li><li><a href="services.html">Mould Design</a></li><li><a href="services.html">Custom Fabrication</a></li><li><a href="services.html">Prototyping</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Google Maps</a></li><li><a href="https://www.linkedin.com/company/metmofabric-engineering-services" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://wa.me/233000000000" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
+  <div class="footer-bottom"><p>© 2025 Metmofabric Engineering Services</p><p>MD: <span class="owner">Mr. Clement N. C. Clottey</span></p></div>
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.1});reveals.forEach(r=>obs.observe(r));
+function toggleProc(header){const item=header.parentElement;item.classList.toggle('open');}
+</script>
+
+<!-- ═══════════════════ WHATSAPP FLOATING BUTTON ═══════════════════ -->
+<div class="wa-float">
+  <span class="wa-tooltip">💬 Chat on WhatsApp</span>
+  <a class="wa-bubble" href="https://wa.me/233000000000?text=Hello%20Metmofabric%2C%20I%20would%20like%20to%20request%20a%20quote%20for..." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+</body>
+</html>

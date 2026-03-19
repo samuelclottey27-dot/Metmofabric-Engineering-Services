@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Metmofabric Engineering Services</title>
+<meta name="description" content="Browse Metmofabric's portfolio of precision mould manufacturing projects — injection moulds, custom fabrication, prototypes, and engineering solutions across West Africa.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111214;--surface:#1a1b1e;--teal:#f97316;--teal-mid:#e8650f;--teal-dim:rgba(249,115,22,.12);--teal-border:rgba(249,115,22,.28);--amber:#f59e0b;--white:#eef4fb;--text:#8da8c4;--border:rgba(255,255,255,.06);--font-head:'Barlow Condensed',sans-serif;--font-body:'Manrope',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;}
+.top-bar{background:var(--teal);padding:.45rem 5%;display:flex;justify-content:space-between;font-size:.78rem;font-weight:600;color:var(--bg);}
+.top-bar a{color:var(--bg);text-decoration:none;font-weight:700;}
+nav{position:sticky;top:0;z-index:999;background:rgba(17,18,20,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:76px;}
+.nav-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
+.nav-logo-mark{width:42px;height:42px;border:2px solid var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--teal);background:var(--teal-dim);}
+.nav-logo-text{font-family:var(--font-head);font-weight:700;font-size:1rem;color:var(--white);line-height:1.1;}
+.nav-logo-text span{display:block;font-size:.6rem;color:var(--teal);letter-spacing:2px;text-transform:uppercase;font-family:var(--font-body);font-weight:600;}
+nav ul{list-style:none;display:flex;gap:2.5rem;}
+nav ul a{color:var(--text);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;}
+nav ul a:hover,nav ul a.active{color:var(--teal);}
+.nav-quote{border:1.5px solid var(--teal)!important;color:var(--teal)!important;padding:.5rem 1.4rem;border-radius:6px;font-weight:600!important;}
+.nav-quote:hover{background:var(--teal)!important;color:var(--bg)!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
+.page-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:5rem 5% 4rem;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.03) 1px,transparent 1px);background-size:60px 60px;}
+.page-hero-inner{position:relative;z-index:1;}
+.breadcrumb{font-size:.78rem;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem;}
+.breadcrumb a{color:var(--teal);text-decoration:none;}
+.breadcrumb span{opacity:.5;}
+.page-title{font-family:var(--font-head);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);letter-spacing:-2px;line-height:1;margin-bottom:1rem;}
+.page-title .hl{color:var(--teal);}
+.page-sub{color:var(--text);font-size:1.05rem;max-width:560px;line-height:1.8;}
+section{padding:5rem 5%;}
+.sec-title{font-family:var(--font-head);font-weight:800;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--white);letter-spacing:-1px;}
+.sec-title .hl{color:var(--teal);}
+.btn-teal{background:var(--teal);color:var(--bg);padding:1rem 2.4rem;border-radius:8px;font-size:.95rem;font-weight:700;text-decoration:none;letter-spacing:.5px;transition:all .2s;display:inline-block;}
+.btn-teal:hover{background:var(--teal-mid);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.35);}
+
+/* FILTERS */
+.filter-bar{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.filter-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:.55rem 1.25rem;border-radius:100px;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.3px;}
+.filter-btn:hover,.filter-btn.active{background:var(--teal);border-color:var(--teal);color:var(--bg);}
+
+/* PORTFOLIO GRID */
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.port-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;cursor:pointer;}
+.port-card:hover{border-color:var(--teal-border);transform:translateY(-4px);box-shadow:0 16px 40px rgba(249,115,22,.08);}
+.port-card-img{height:200px;position:relative;overflow:hidden;}
+.port-card-img-inner{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .4s;}
+.port-card:hover .port-card-img-inner{transform:scale(1.05);}
+.port-card-img-inner::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(17,18,20,.8) 100%);}
+.port-cat-tag{position:absolute;top:1rem;left:1rem;background:var(--teal);color:var(--bg);padding:.2rem .75rem;border-radius:100px;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;z-index:1;}
+.port-card-body{padding:1.5rem;}
+.port-card-body h3{font-family:var(--font-head);font-weight:700;color:var(--white);font-size:1.05rem;margin-bottom:.5rem;}
+.port-card-body p{color:var(--text);font-size:.83rem;line-height:1.6;margin-bottom:1.1rem;}
+.port-specs{display:flex;gap:.5rem;flex-wrap:wrap;}
+.port-spec{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:.2rem .65rem;border-radius:5px;font-size:.72rem;font-weight:600;}
+
+/* CTA BAND */
+.port-cta{background:var(--surface);border-top:1px solid var(--teal-border);border-bottom:1px solid var(--teal-border);padding:4.5rem 5%;display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem;}
+.port-cta h2{font-family:var(--font-head);font-weight:800;font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);letter-spacing:-1px;}
+.port-cta h2 .hl{color:var(--teal);}
+.port-cta p{color:var(--text);margin-top:.4rem;}
+
+/* TESTIMONIALS MINI */
+.testi-mini{background:var(--surface);padding:5rem 5%;}
+.testi-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.tm-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:1.75rem;transition:border-color .25s;}
+.tm-card:hover{border-color:var(--teal-border);}
+.stars{color:var(--amber);font-size:.82rem;letter-spacing:2px;margin-bottom:.9rem;}
+.tm-card p{color:var(--text);font-size:.87rem;line-height:1.8;font-style:italic;margin-bottom:1.25rem;}
+.tm-auth{display:flex;align-items:center;gap:.7rem;}
+.tm-av{width:38px;height:38px;border-radius:50%;background:var(--teal-dim);border:2px solid var(--teal-border);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;color:var(--teal);font-size:.82rem;}
+.tm-name{font-weight:700;font-size:.85rem;color:var(--white);}
+.tm-role{font-size:.74rem;color:var(--text);}
+
+footer{background:var(--surface);border-top:1px solid var(--border);}
+.footer-main{padding:3.5rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+.footer-brand p{color:var(--text);font-size:.85rem;line-height:1.7;margin-top:1rem;max-width:260px;}
+.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col ul a{color:var(--text);text-decoration:none;font-size:.85rem;transition:color .2s;}
+.footer-col ul a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid var(--border);padding:1.5rem 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;}
+.footer-bottom p{font-size:.8rem;color:var(--text);}
+.footer-bottom .owner{color:var(--teal);font-weight:600;}
+.footer-teal-bar{height:3px;background:linear-gradient(to right,var(--teal),var(--amber),var(--teal));}
+.hidden{display:none!important;}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+@media(max-width:900px){nav ul{display:none;}.nav-mobile-toggle{display:block;}.port-grid{grid-template-columns:1fr 1fr;}.testi-mini-grid{grid-template-columns:1fr 1fr;}.port-cta{grid-template-columns:1fr;}.footer-main{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.port-grid,.testi-mini-grid{grid-template-columns:1fr;}}
+</style>
+<style>
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;}
+.wa-bubble{width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;}
+.wa-bubble:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.6);}
+.wa-bubble svg{width:32px;height:32px;fill:#fff;}
+.wa-tooltip{background:#1a1b1e;color:#f4f4f5;font-family:'Manrope',sans-serif;font-size:.8rem;font-weight:600;padding:.45rem .9rem;border-radius:100px;white-space:nowrap;box-shadow:0 2px 12px rgba(0,0,0,.35);opacity:0;transform:translateX(8px);transition:opacity .2s,transform .2s;pointer-events:none;border:1px solid rgba(249,115,22,.2);}
+.wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0);}
+@keyframes waPulse{0%{transform:scale(1);opacity:.6;}100%{transform:scale(1.7);opacity:0;}}
+</style>
+</head>
+<body>
+<div class="top-bar"><span>⚙️ Metmofabric Engineering Services — Precision Mould Manufacturing</span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Find Our Workshop</a></div>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">ME</div><div class="nav-logo-text">Metmofabric<span>Engineering Services</span></div></a>
+  <ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="contact.html" class="nav-quote">Get a Quote</a></li></ul>
+  <button class="nav-mobile-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Portfolio</div>
+    <h1 class="page-title">Our <span class="hl">Project Portfolio</span></h1>
+    <p class="page-sub">A selection of precision mould manufacturing and engineering projects delivered by Metmofabric across diverse industries.</p>
+  </div>
+</div>
+
+<section>
+  <div class="filter-bar reveal" id="filterBar">
+    <button class="filter-btn active" onclick="filter('all',this)">All Projects</button>
+    <button class="filter-btn" onclick="filter('injection',this)">Injection Moulds</button>
+    <button class="filter-btn" onclick="filter('design',this)">Mould Design</button>
+    <button class="filter-btn" onclick="filter('fabrication',this)">Custom Fabrication</button>
+    <button class="filter-btn" onclick="filter('prototype',this)">Prototypes</button>
+    <button class="filter-btn" onclick="filter('repair',this)">Mould Repair</button>
+  </div>
+  <div class="port-grid" id="portGrid">
+
+    <div class="port-card reveal" data-cat="injection">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Injection Mould</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Multi-Cavity Cap Mould</h3>
+        <p>32-cavity injection mould for FMCG bottle caps. Delivered to tolerance ±0.01mm with hot runner system.</p>
+        <div class="port-specs"><span class="port-spec">32 Cavities</span><span class="port-spec">Hot Runner</span><span class="port-spec">PP Material</span><span class="port-spec">±0.01mm</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="fabrication" style="transition-delay:.06s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Custom Fabrication</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1518704618243-b719e5d5f2b8?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Industrial Jig & Fixture Set</h3>
+        <p>Custom precision jigs and fixtures for automotive assembly line. 6-piece set with sub-0.05mm positional accuracy.</p>
+        <div class="port-specs"><span class="port-spec">6-Piece Set</span><span class="port-spec">CNC Machined</span><span class="port-spec">Hardened Steel</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="design" style="transition-delay:.12s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Mould Design</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Thin-Wall Container Mould Design</h3>
+        <p>Complete CAD/CAM design and DFM analysis for thin-wall food container mould. Design to trial in 6 weeks.</p>
+        <div class="port-specs"><span class="port-spec">CAD/CAM</span><span class="port-spec">DFM Analysis</span><span class="port-spec">Thin-Wall</span><span class="port-spec">PP/PE</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="injection" style="transition-delay:.18s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Injection Mould</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Automotive Trim Panel Mould</h3>
+        <p>Large single-cavity mould for automotive interior trim panels. High-gloss Class A surface finish.</p>
+        <div class="port-specs"><span class="port-spec">Single Cavity</span><span class="port-spec">Class A Finish</span><span class="port-spec">ABS/PC</span><span class="port-spec">Complex Geometry</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="prototype" style="transition-delay:.24s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Prototype</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Medical Device Housing Prototype</h3>
+        <p>Rapid prototype mould for medical diagnostic device housing. 3 iterations from concept to validated design.</p>
+        <div class="port-specs"><span class="port-spec">Medical Grade</span><span class="port-spec">3 Iterations</span><span class="port-spec">ABS Material</span><span class="port-spec">Rapid Turnaround</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="repair" style="transition-delay:.30s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Mould Repair</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1518704618243-b719e5d5f2b8?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>High-Wear Mould Refurbishment</h3>
+        <p>Complete refurbishment of high-production packaging mould — weld repair, re-polishing, and cavity rework. Restored to 100% original spec.</p>
+        <div class="port-specs"><span class="port-spec">Weld Repair</span><span class="port-spec">Cavity Rework</span><span class="port-spec">Re-Polished</span><span class="port-spec">24hr Turnaround</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="injection" style="transition-delay:.06s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Injection Mould</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Agricultural Fitting Mould Set</h3>
+        <p>Set of 8 injection moulds for irrigation system fittings. UV-resistant material spec, delivered in 10 weeks.</p>
+        <div class="port-specs"><span class="port-spec">8-Mould Set</span><span class="port-spec">UV-Resistant</span><span class="port-spec">HDPE</span><span class="port-spec">10-Week Delivery</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="fabrication" style="transition-delay:.12s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Custom Fabrication</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Precision Shaft Components</h3>
+        <p>Batch of 200 precision-turned shaft components for industrial pump assemblies. 100% dimensional inspection.</p>
+        <div class="port-specs"><span class="port-spec">200-pc Batch</span><span class="port-spec">CNC Turned</span><span class="port-spec">Stainless Steel</span><span class="port-spec">100% Inspection</span></div>
+      </div>
+    </div>
+
+    <div class="port-card reveal" data-cat="design" style="transition-delay:.18s">
+      <div class="port-card-img">
+        <div class="port-cat-tag">Mould Design</div>
+        <div class="port-card-img-inner" style="background-image:url('https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80')"></div>
+      </div>
+      <div class="port-card-body">
+        <h3>Electronics Enclosure Mould Design</h3>
+        <p>Full design package for consumer electronics enclosure — including insert mould design, draft analysis, and steel selection recommendations.</p>
+        <div class="port-specs"><span class="port-spec">Insert Moulding</span><span class="port-spec">Draft Analysis</span><span class="port-spec">ABS+PC</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-mini">
+  <div style="text-align:center;margin-bottom:.5rem;" class="reveal">
+    <h2 class="sec-title">What <span class="hl">Clients Say</span></h2>
+  </div>
+  <div class="testi-mini-grid">
+    <div class="tm-card reveal"><div class="stars">★★★★★</div><p>"Exceptional precision and quality. The moulds they delivered have been running in our facility for over a year without a single issue."</p><div class="tm-auth"><div class="tm-av">AK</div><div><div class="tm-name">Ama Kofi</div><div class="tm-role">Production Manager, AK Industries</div></div></div></div>
+    <div class="tm-card reveal" style="transition-delay:.1s"><div class="stars">★★★★★</div><p>"Our most reliable manufacturing partner. Metmofabric understands our needs and consistently delivers beyond expectation."</p><div class="tm-auth"><div class="tm-av">SK</div><div><div class="tm-name">Samuel Kwame</div><div class="tm-role">CEO, Precision Parts Ltd</div></div></div></div>
+    <div class="tm-card reveal" style="transition-delay:.2s"><div class="stars">★★★★★</div><p>"They refurbished our ageing mould set in record time. Quality was restored to factory spec — saved us from a very expensive replacement."</p><div class="tm-auth"><div class="tm-av">EA</div><div><div class="tm-name">Emmanuel Asante</div><div class="tm-role">Director, TechFab Ghana</div></div></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="port-cta">
+  <div class="reveal"><h2>Have a Project in Mind? <span class="hl">Let's Build It.</span></h2><p>Get a free consultation and competitive quote — our engineers respond within 24 hours.</p></div>
+  <a href="contact.html" class="btn-teal reveal">→ Request a Free Quote</a>
+</div>
+
+<div class="footer-teal-bar"></div>
+<footer>
+  <div class="footer-main"><div class="footer-brand"><a href="index.html" class="nav-logo" style="text-decoration:none"><div class="nav-logo-mark">ME</div><div class="nav-logo-text">Metmofabric<span>Engineering Services</span></div></a><p>Led by <strong style="color:var(--teal)">Mr. Clement N. C. Clottey</strong>.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Injection Moulds</a></li><li><a href="services.html">Mould Design</a></li><li><a href="services.html">Fabrication</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Google Maps</a></li><li><a href="https://www.linkedin.com/company/metmofabric-engineering-services" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://wa.me/233000000000" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
+  <div class="footer-bottom"><p>© 2025 Metmofabric Engineering Services</p><p>MD: <span class="owner">Mr. Clement N. C. Clottey</span></p></div>
+</footer>
+<script>
+const reveals=document.querySelectorAll('.reveal');const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.08});reveals.forEach(r=>obs.observe(r));
+function filter(cat,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.port-card').forEach(c=>{
+    if(cat==='all'||c.dataset.cat===cat){c.classList.remove('hidden');}else{c.classList.add('hidden');}
+  });
+}
+</script>
+
+<!-- ═══════════════════ WHATSAPP FLOATING BUTTON ═══════════════════ -->
+<div class="wa-float">
+  <span class="wa-tooltip">💬 Chat on WhatsApp</span>
+  <a class="wa-bubble" href="https://wa.me/233000000000?text=Hello%20Metmofabric%2C%20I%20would%20like%20to%20request%20a%20quote%20for..." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+<!-- ══════════════════════════════════════════════════════════════════ -->
+
+</body>
+</html>

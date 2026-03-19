@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Metmofabric Engineering Services</title>
+<meta name="description" content="Contact Metmofabric Engineering Services for a free quote on precision mould manufacturing. Speak with our engineering team or visit our workshop.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111214;--surface:#1a1b1e;--teal:#f97316;--teal-mid:#e8650f;--teal-dim:rgba(249,115,22,.12);--teal-border:rgba(249,115,22,.28);--amber:#f59e0b;--white:#eef4fb;--text:#8da8c4;--border:rgba(255,255,255,.06);--font-head:'Barlow Condensed',sans-serif;--font-body:'Manrope',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;}
+.top-bar{background:var(--teal);padding:.45rem 5%;display:flex;justify-content:space-between;font-size:.78rem;font-weight:600;color:var(--bg);}
+.top-bar a{color:var(--bg);text-decoration:none;font-weight:700;}
+nav{position:sticky;top:0;z-index:999;background:rgba(17,18,20,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:76px;}
+.nav-logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
+.nav-logo-mark{width:42px;height:42px;border:2px solid var(--teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:1rem;color:var(--teal);background:var(--teal-dim);}
+.nav-logo-text{font-family:var(--font-head);font-weight:700;font-size:1rem;color:var(--white);line-height:1.1;}
+.nav-logo-text span{display:block;font-size:.6rem;color:var(--teal);letter-spacing:2px;text-transform:uppercase;font-family:var(--font-body);font-weight:600;}
+nav ul{list-style:none;display:flex;gap:2.5rem;}
+nav ul a{color:var(--text);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s;}
+nav ul a:hover,nav ul a.active{color:var(--teal);}
+.nav-quote{border:1.5px solid var(--teal)!important;color:var(--teal)!important;padding:.5rem 1.4rem;border-radius:6px;font-weight:600!important;}
+.nav-quote:hover{background:var(--teal)!important;color:var(--bg)!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
+.page-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:5rem 5% 4rem;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.03) 1px,transparent 1px);background-size:60px 60px;}
+.page-hero-inner{position:relative;z-index:1;}
+.breadcrumb{font-size:.78rem;color:var(--text);margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem;}
+.breadcrumb a{color:var(--teal);text-decoration:none;}
+.breadcrumb span{opacity:.5;}
+.page-title{font-family:var(--font-head);font-weight:800;font-size:clamp(2.5rem,5vw,4rem);color:var(--white);letter-spacing:-2px;line-height:1;margin-bottom:1rem;}
+.page-title .hl{color:var(--teal);}
+.page-sub{color:var(--text);font-size:1.05rem;max-width:560px;line-height:1.8;}
+
+/* MAIN CONTACT LAYOUT */
+.contact-main{padding:5rem 5%;display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;}
+
+/* INFO PANEL */
+.info-panel{position:sticky;top:96px;}
+.info-panel h2{font-family:var(--font-head);font-weight:800;font-size:1.7rem;color:var(--white);letter-spacing:-1px;margin-bottom:.75rem;}
+.info-panel .hl{color:var(--teal);}
+.info-panel > p{color:var(--text);font-size:.9rem;line-height:1.8;margin-bottom:2rem;}
+.info-cards{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
+.ic{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color .2s;text-decoration:none;}
+.ic:hover{border-color:var(--teal-border);}
+.ic-icon{width:40px;height:40px;background:var(--teal-dim);border:1px solid var(--teal-border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.ic-lbl{font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text);margin-bottom:.2rem;}
+.ic-val{font-size:.9rem;color:var(--white);font-weight:600;}
+.ic-val a{color:var(--teal);text-decoration:none;}
+.hours-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.25rem;}
+.hours-card h4{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;}
+.hours-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.85rem;}
+.hours-row:last-child{border-bottom:none;}
+.hours-day{color:var(--text);}
+.hours-time{color:var(--white);font-weight:600;}
+.map-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;background:var(--teal);color:var(--bg);padding:.9rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.88rem;letter-spacing:.3px;margin-top:1.25rem;transition:all .2s;}
+.map-btn:hover{background:var(--teal-mid);transform:translateY(-1px);}
+.whatsapp-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;background:#25D366;color:#fff;padding:.9rem;border-radius:10px;text-decoration:none;font-weight:700;font-size:.88rem;letter-spacing:.3px;margin-top:.75rem;transition:all .2s;}
+.whatsapp-btn:hover{background:#20bd5a;transform:translateY(-1px);}
+
+/* FORM PANEL */
+.form-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:3rem;}
+.form-panel h2{font-family:var(--font-head);font-weight:800;font-size:1.6rem;color:var(--white);letter-spacing:-1px;margin-bottom:.5rem;}
+.form-panel .hl{color:var(--teal);}
+.form-panel>p{color:var(--text);font-size:.88rem;margin-bottom:2rem;}
+.formspree-note{background:var(--teal-dim);border:1px solid var(--teal-border);border-radius:8px;padding:.9rem 1.1rem;margin-bottom:1.75rem;font-size:.8rem;color:var(--teal);line-height:1.6;}
+.formspree-note strong{color:var(--white);}
+.formspree-note a{color:var(--teal);}
+.cf{display:flex;flex-direction:column;gap:1.25rem;}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+.cf-group{display:flex;flex-direction:column;gap:.4rem;}
+.cf-group label{font-size:.73rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);}
+.cf-group input,.cf-group textarea,.cf-group select{background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:.9rem 1.1rem;font-family:var(--font-body);font-size:.9rem;color:var(--white);transition:border-color .2s;outline:none;}
+.cf-group input:focus,.cf-group textarea:focus,.cf-group select:focus{border-color:var(--teal);}
+.cf-group input::placeholder,.cf-group textarea::placeholder{color:var(--text);}
+.cf-group textarea{min-height:130px;resize:vertical;}
+.cf-group select option{background:var(--surface);}
+.radio-group{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.3rem;}
+.radio-label{display:flex;align-items:center;gap:.45rem;cursor:pointer;font-size:.82rem;color:var(--text);padding:.4rem .85rem;border:1.5px solid var(--border);border-radius:6px;transition:all .2s;user-select:none;}
+.radio-label:hover{border-color:var(--teal-border);color:var(--white);}
+.radio-label input{display:none;}
+.radio-label.selected{background:var(--teal-dim);border-color:var(--teal);color:var(--teal);}
+.submit-btn{background:var(--teal);color:var(--bg);padding:1.1rem;border-radius:8px;font-family:var(--font-head);font-size:1rem;font-weight:800;letter-spacing:.5px;border:none;cursor:pointer;width:100%;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:.7rem;}
+.submit-btn:hover{background:var(--teal-mid);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.35);}
+.submit-btn:disabled{opacity:.7;cursor:not-allowed;transform:none;}
+.success-msg{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:10px;padding:2rem;text-align:center;display:none;}
+.success-msg .s-icon{font-size:2.5rem;margin-bottom:1rem;}
+.success-msg h3{font-family:var(--font-head);font-weight:700;color:#4ade80;font-size:1.2rem;margin-bottom:.5rem;}
+.success-msg p{color:var(--text);font-size:.9rem;}
+.error-msg{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:8px;padding:.85rem 1rem;color:#f87171;font-size:.85rem;display:none;margin-top:1rem;}
+
+/* FAQ */
+.faq{padding:5rem 5%;background:var(--surface);}
+.faq-inner{max-width:800px;margin:0 auto;}
+.faq h2{font-family:var(--font-head);font-weight:800;font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--white);letter-spacing:-1px;margin-bottom:.75rem;}
+.faq h2 .hl{color:var(--teal);}
+.faq>div>p{color:var(--text);margin-bottom:2.5rem;}
+.faq-list{display:flex;flex-direction:column;gap:.75rem;}
+.faq-item{background:var(--bg);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.faq-q{padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--white);font-weight:600;font-size:.95rem;}
+.faq-q span{color:var(--teal);font-size:1.2rem;transition:transform .25s;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{padding:0 1.5rem 1.25rem;color:var(--text);font-size:.88rem;line-height:1.8;display:none;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open{border-color:var(--teal-border);}
+
+footer{background:var(--surface);border-top:1px solid var(--border);}
+.footer-main{padding:3.5rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+.footer-brand p{color:var(--text);font-size:.85rem;line-height:1.7;margin-top:1rem;max-width:260px;}
+.footer-col h4{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:1.25rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col ul a{color:var(--text);text-decoration:none;font-size:.85rem;transition:color .2s;}
+.footer-col ul a:hover{color:var(--teal);}
+.footer-bottom{border-top:1px solid var(--border);padding:1.5rem 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem;}
+.footer-bottom p{font-size:.8rem;color:var(--text);}
+.footer-bottom .owner{color:var(--teal);font-weight:600;}
+.footer-teal-bar{height:3px;background:linear-gradient(to right,var(--teal),var(--amber),var(--teal));}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+@media(max-width:960px){.contact-main{grid-template-columns:1fr;}.info-panel{position:static;}.cf-row{grid-template-columns:1fr;}}
+@media(max-width:900px){nav ul{display:none;}.nav-mobile-toggle{display:block;}.footer-main{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="top-bar"><span>⚙️ Metmofabric Engineering Services — Precision Mould Manufacturing</span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Find Our Workshop</a></div>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">ME</div><div class="nav-logo-text">Metmofabric<span>Engineering Services</span></div></a>
+  <ul id="navMenu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html" class="active nav-quote">Get a Quote</a></li></ul>
+  <button class="nav-mobile-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
+    <h1 class="page-title">Get a <span class="hl">Free Quote</span></h1>
+    <p class="page-sub">Tell us about your project and our engineering team will respond with a detailed, competitive proposal within 24 hours.</p>
+  </div>
+</div>
+
+<div class="contact-main">
+  <!-- INFO PANEL -->
+  <div class="info-panel reveal">
+    <h2>Let's Build <span class="hl">Together</span></h2>
+    <p>Whether you need a simple quote or a detailed engineering consultation, our team is ready to help you achieve precision results.</p>
+    <div class="info-cards">
+      <a href="tel:+233000000000" class="ic">
+        <div class="ic-icon">📞</div>
+        <div><div class="ic-lbl">Phone</div><div class="ic-val">+233 XXX XXX XXXX</div></div>
+      </a>
+      <a href="/cdn-cgi/l/email-protection#93fafdf5fcd3fef6e7fefcf5f2f1e1faf0bdf0fcfe" class="ic">
+        <div class="ic-icon">✉️</div>
+        <div><div class="ic-lbl">Email</div><div class="ic-val"><span class="__cf_email__" data-cfemail="9ff6f1f9f0dff2faebf2f0f9fefdedf6fcb1fcf0f2">[email&#160;protected]</span></div></div>
+      </a>
+      <a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" class="ic">
+        <div class="ic-icon">📍</div>
+        <div><div class="ic-lbl">Workshop Location</div><div class="ic-val">View on Google Maps →</div></div>
+      </a>
+      <div class="ic" style="text-decoration:none;cursor:default">
+        <div class="ic-icon">👷</div>
+        <div><div class="ic-lbl">Managing Director</div><div class="ic-val">Mr. Clement N. C. Clottey</div></div>
+      </div>
+    </div>
+    <div class="hours-card">
+      <h4>Business Hours</h4>
+      <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 AM – 6:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9:00 AM – 2:00 PM</span></div>
+      <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></div>
+    </div>
+    <a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" class="map-btn">📍 View Our Workshop on Google Maps</a>
+    <!-- GOOGLE MAPS EMBED -->
+    <div style="margin-top:1.25rem;border-radius:10px;overflow:hidden;border:1px solid rgba(249,115,22,.2);">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9!2d-0.187!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMetmofabric+Engineering+Services!5e0!3m2!1sen!2sgh!4v1234567890!5m2!1sen!2sgh"
+        width="100%"
+        height="220"
+        style="border:0;display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Metmofabric Engineering Services Workshop Location">
+      </iframe>
+    </div>
+    <a href="https://wa.me/233000000000?text=Hello%20Metmofabric%2C%20I%20would%20like%20to%20request%20a%20quote%20for..." target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+  </div>
+
+  <!-- FORM PANEL -->
+  <div class="form-panel reveal" style="transition-delay:.15s">
+    <h2>Request a <span class="hl">Quote</span></h2>
+    <p>Fill in the form below — the more detail you provide, the more accurate our quote will be.</p>
+
+    <!-- ═══════════════════════════════════════════════════
+         FORMSPREE SETUP INSTRUCTIONS
+         1. Go to https://formspree.io and create a FREE account
+         2. Click "New Form" → give it a name → copy your Form ID
+         3. Replace "YOUR_FORM_ID" below with your actual Form ID
+            (looks like: xyzabcde)
+         4. Formspree will forward all submissions to your email
+         5. Free plan allows 50 submissions/month (upgrade for more)
+    ═══════════════════════════════════════════════════ -->
+    <div class="formspree-note">
+      ⚙️ <strong>Form Backend Setup:</strong> This form uses <a href="https://formspree.io" target="_blank">Formspree</a> to send emails. Replace <code>YOUR_FORM_ID</code> in the HTML with your Formspree form ID to activate. Free plan at formspree.io
+    </div>
+
+    <div id="successMsg" class="success-msg">
+      <div class="s-icon">✅</div>
+      <h3>Quote Request Received!</h3>
+      <p>Thank you for contacting Metmofabric Engineering Services. Our team will review your requirements and respond with a detailed proposal within 24 hours.</p>
+    </div>
+    <div id="errorMsg" class="error-msg">⚠️ Something went wrong. Please try again or email us directly at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="167f787079567b73627b79707774647f753875797b">[email&#160;protected]</a></div>
+
+    <form class="cf" id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <!-- Honeypot anti-spam -->
+      <input type="text" name="_gotcha" style="display:none">
+      <!-- Redirect after submit (optional) -->
+      <input type="hidden" name="_subject" value="New Quote Request — Metmofabric Engineering Services">
+
+      <div class="cf-row">
+        <div class="cf-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="cf-group">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" placeholder="Your company (if applicable)">
+        </div>
+      </div>
+      <div class="cf-row">
+        <div class="cf-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
+        <div class="cf-group">
+          <label for="phone">Phone / WhatsApp</label>
+          <input type="tel" id="phone" name="phone" placeholder="+233 XXX XXX XXXX">
+        </div>
+      </div>
+      <div class="cf-group">
+        <label for="service">Service Required *</label>
+        <select id="service" name="service" required>
+          <option value="">— Select a service —</option>
+          <option>Injection Mould Manufacturing</option>
+          <option>Mould Design & Engineering (CAD/CAM)</option>
+          <option>Custom Fabrication</option>
+          <option>Prototype Development</option>
+          <option>Mould Repair & Maintenance</option>
+          <option>Engineering Consultation</option>
+          <option>Multiple Services</option>
+        </select>
+      </div>
+      <div class="cf-group">
+        <label>Budget Range (Optional)</label>
+        <div class="radio-group" id="budgetGroup">
+          <label class="radio-label" onclick="selectRadio(this,'budget')"><input type="radio" name="budget" value="Under GH₵10,000">Under GH₵10,000</label>
+          <label class="radio-label" onclick="selectRadio(this,'budget')"><input type="radio" name="budget" value="GH₵10K – GH₵50K">GH₵10K – GH₵50K</label>
+          <label class="radio-label" onclick="selectRadio(this,'budget')"><input type="radio" name="budget" value="GH₵50K – GH₵200K">GH₵50K – GH₵200K</label>
+          <label class="radio-label" onclick="selectRadio(this,'budget')"><input type="radio" name="budget" value="GH₵200K+">GH₵200K+</label>
+        </div>
+      </div>
+      <div class="cf-group">
+        <label for="timeline">Preferred Delivery Timeline</label>
+        <select id="timeline" name="timeline">
+          <option value="">— Select timeline —</option>
+          <option>ASAP — Urgent</option>
+          <option>Within 4 weeks</option>
+          <option>4 – 8 weeks</option>
+          <option>8 – 16 weeks</option>
+          <option>Flexible / Planning Phase</option>
+        </select>
+      </div>
+      <div class="cf-group">
+        <label for="message">Project Description *</label>
+        <textarea id="message" name="message" placeholder="Please describe your project — mould type, materials, part dimensions, cavity count, annual volume, any existing drawings or references..." required></textarea>
+      </div>
+      <div class="cf-group">
+        <label>How did you hear about us?</label>
+        <select name="source">
+          <option value="">— Select —</option>
+          <option>Google Search</option>
+          <option>Google Maps</option>
+          <option>Referral / Word of Mouth</option>
+          <option>LinkedIn</option>
+          <option>WhatsApp</option>
+          <option>Facebook</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span id="submitText">⚙️ Send Quote Request</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="reveal">
+      <h2>Frequently Asked <span class="hl">Questions</span></h2>
+      <p>Quick answers to common questions about working with Metmofabric.</p>
+    </div>
+    <div class="faq-list reveal" style="transition-delay:.1s">
+      <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">How quickly can I get a quote?<span>+</span></div><div class="faq-a">We aim to respond to all quote requests within 24 hours on business days. For urgent requirements, please call us directly or send a WhatsApp message and we'll prioritise your enquiry.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What information do I need to provide for a quote?<span>+</span></div><div class="faq-a">The more detail the better. Ideally: part drawings or 3D files (STEP/IGES), required material, annual production volume, number of cavities required, and delivery timeline. We can also quote based on a part sample or verbal description as a starting point.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is your typical lead time for injection mould manufacturing?<span>+</span></div><div class="faq-a">Lead times vary by mould complexity. Simple single-cavity moulds typically take 4–6 weeks. Complex multi-cavity or hot runner moulds may require 8–16 weeks. We'll provide a specific timeline with your quotation.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you work with clients outside Ghana?<span>+</span></div><div class="faq-a">Yes — we work with clients across West Africa and are experienced in managing remote projects. We can conduct consultations via video call, share detailed design reviews digitally, and arrange delivery across the region.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is your payment structure?<span>+</span></div><div class="faq-a">We typically work on a 50% deposit at project confirmation and 50% on completion before delivery. For larger projects, we can discuss milestone-based payment schedules. Contact us to discuss your specific requirements.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Do you offer mould maintenance contracts?<span>+</span></div><div class="faq-a">Yes — we offer annual mould maintenance contracts that include periodic inspections, preventative servicing, and priority repair turnaround. These contracts help extend tool life and reduce unplanned production downtime.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="footer-teal-bar"></div>
+<footer>
+  <div class="footer-main"><div class="footer-brand"><a href="index.html" class="nav-logo" style="text-decoration:none"><div class="nav-logo-mark">ME</div><div class="nav-logo-text">Metmofabric<span>Engineering Services</span></div></a><p>Led by <strong style="color:var(--teal)">Mr. Clement N. C. Clottey</strong>.</p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Injection Moulds</a></li><li><a href="services.html">Mould Design</a></li><li><a href="services.html">Fabrication</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Google Maps</a></li><li><a href="https://www.linkedin.com/company/metmofabric-engineering-services" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://wa.me/233000000000" target="_blank" rel="noopener">WhatsApp</a></li></ul></div></div>
+  <div class="footer-bottom"><p>© 2025 Metmofabric Engineering Services</p><p>MD: <span class="owner">Mr. Clement N. C. Clottey</span></p></div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Scroll reveal
+const reveals=document.querySelectorAll('.reveal');const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:.1});reveals.forEach(r=>obs.observe(r));
+
+// FAQ toggle
+function toggleFaq(el){el.parentElement.classList.toggle('open');}
+
+// Radio selector
+function selectRadio(label,group){document.querySelectorAll(`.radio-label`).forEach(l=>{if(l.closest(`#budgetGroup`)===label.closest(`#budgetGroup`))l.classList.remove('selected');});label.classList.add('selected');}
+
+// Form submission with AJAX
+const form = document.getElementById('quoteForm');
+const btn = document.getElementById('submitBtn');
+const successMsg = document.getElementById('successMsg');
+const errorMsg = document.getElementById('errorMsg');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  // Check if Formspree ID has been configured
+  const action = form.getAttribute('action');
+  if(action.includes('YOUR_FORM_ID')) {
+    // Fallback: simulate success for demo purposes
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+    // Track conversion in GA4
+    gtag('event', 'quote_request', { event_category: 'conversion', event_label: 'demo_mode' });
+    return;
+  }
+
+  btn.disabled = true;
+  document.getElementById('submitText').textContent = '⏳ Sending...';
+  errorMsg.style.display = 'none';
+
+  try {
+    const data = new FormData(form);
+    const response = await fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if(response.ok) {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+      // Track GA4 conversion event
