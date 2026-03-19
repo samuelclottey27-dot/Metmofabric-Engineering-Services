@@ -123,7 +123,7 @@ nav ul a:hover,nav ul a.active{color:var(--teal);}
 .nav-mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
 
 /* ──── HERO ──── */
-.hero{min-height:95vh;display:flex;flex-direction:column;justify-content:center;padding:120px 5% 80px;position:relative;overflow:hidden;}
+.hero{min-height:95vh;min-height:95svh;display:flex;flex-direction:column;justify-content:center;padding:120px 5% 80px;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 40%,rgba(249,115,22,.08) 0%,transparent 70%);pointer-events:none;}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
 .hero-diag{position:absolute;right:-100px;top:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 45%,rgba(249,115,22,.03) 45%);clip-path:polygon(20% 0%,100% 0%,100% 100%,0% 100%);pointer-events:none;}
@@ -150,7 +150,7 @@ nav ul a:hover,nav ul a.active{color:var(--teal);}
 
 /* ──── TICKER ──── */
 .ticker-wrap{background:var(--surface);border-top:1px solid var(--teal-border);border-bottom:1px solid var(--teal-border);padding:.8rem 0;overflow:hidden;}
-.ticker-track{display:flex;animation:ticker 35s linear infinite;white-space:nowrap;width:max-content;}
+.ticker-track{display:flex;animation:ticker 35s linear infinite;white-space:nowrap;width:max-content;will-change:transform;}
 .ticker-item{display:flex;align-items:center;gap:1.2rem;padding:0 2.5rem;font-size:.8rem;font-weight:600;color:var(--text);letter-spacing:1px;text-transform:uppercase;}
 .ticker-item span{color:var(--teal);}
 
@@ -249,27 +249,119 @@ footer{background:var(--surface);border-top:1px solid var(--border);}
 .footer-teal-bar{height:3px;background:linear-gradient(to right,var(--teal),var(--amber),var(--teal));}
 
 /* ──── REVEAL / ANIMATIONS ──── */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%)}}
-
-/* ──── RESPONSIVE ──── */
-@media(max-width:900px){
-  nav ul{display:none;}nav ul.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--bg);padding:1.5rem 5%;gap:1.25rem;border-bottom:1px solid var(--border);}
-  .nav-mobile-toggle{display:block;}
-  .about,.cta-band{grid-template-columns:1fr;}
-  .srv-grid,.testi-grid,.why-grid{grid-template-columns:1fr 1fr;}
-  .metrics{grid-template-columns:repeat(2,1fr);}
-  .proc-grid{grid-template-columns:1fr 1fr;gap:2rem;}.proc-grid::before{display:none;}
-  .footer-main{grid-template-columns:1fr 1fr;}
-  .about-img{height:300px;}
+/* Use translate3d to force GPU compositing — eliminates scroll lag */
+.reveal{
+  opacity:0;
+  transform:translate3d(0,24px,0);
+  transition:opacity .5s ease,transform .5s ease;
+  will-change:opacity,transform;
+  backface-visibility:hidden;
 }
-@media(max-width:600px){
-  .srv-grid,.testi-grid,.why-grid{grid-template-columns:1fr;}
+.reveal.visible{opacity:1;transform:translate3d(0,0,0);}
+/* Disable reveal on reduced-motion preference */
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+@keyframes fadeUp{from{opacity:0;transform:translate3d(0,24px,0);}to{opacity:1;transform:translate3d(0,0,0);}}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+@keyframes ticker{from{transform:translate3d(0,0,0);}to{transform:translate3d(-50%,0,0)}}
+
+/* ──── RESPONSIVE — TABLET (≤1024px) ──── */
+@media(max-width:1024px){
+  .footer-main{grid-template-columns:1fr 1fr;gap:2rem;}
+  .srv-grid{grid-template-columns:repeat(2,1fr);}
+  .testi-grid{grid-template-columns:repeat(2,1fr);}
+  .proc-grid{grid-template-columns:repeat(3,1fr);gap:2rem;}
+  .proc-grid::before{display:none;}
+}
+
+/* ──── RESPONSIVE — MOBILE (≤768px) ──── */
+@media(max-width:768px){
+  /* Nav */
+  nav{height:64px;}
+  nav ul{display:none;}
+  nav ul.open{
+    display:flex;flex-direction:column;
+    position:fixed;top:64px;left:0;right:0;bottom:0;
+    background:var(--bg);padding:2rem 5%;gap:1.5rem;
+    border-bottom:1px solid var(--border);
+    z-index:998;overflow-y:auto;
+    -webkit-backdrop-filter:none;backdrop-filter:none;
+  }
+  nav ul.open a{font-size:1.1rem;}
+  .nav-mobile-toggle{display:block;}
+  /* Disable backdrop-filter on mobile nav — major scroll lag source */
+  nav{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(17,18,20,.99);}
+
+  /* Top bar — hide long text, show only essentials */
+  .top-bar{flex-direction:column;gap:.3rem;text-align:center;padding:.5rem 5%;font-size:.72rem;}
+  .top-bar>span:first-child{display:none;}
+
+  /* Hero */
+  .hero{min-height:100svh;padding:88px 5% 80px;}
+  .hero h1{font-size:clamp(2.4rem,10vw,4rem);letter-spacing:-1px;}
+  .hero-sub{font-size:.95rem;margin:1.5rem 0 2rem;}
+  .hero-btns{flex-direction:column;gap:.75rem;}
+  .hero-btns a{text-align:center;justify-content:center;}
+  .hero-float{gap:1rem;margin-top:2.5rem;}
+  .hero-float-card{padding:.75rem 1.1rem;}
+  .hfc-num{font-size:1.2rem;}
+  .hero-scroll{display:none;}
+
+  /* Sections */
+  section{padding:4rem 5%;}
+  .sec-center{margin-bottom:2.5rem;}
+
+  /* About */
+  .about{grid-template-columns:1fr;gap:3rem;}
+  .about-img{height:260px;}
+  .about-badge{bottom:-12px;right:12px;padding:1rem 1.25rem;}
+  .about-badge .n{font-size:1.5rem;}
+  .about-corner{width:50px;height:50px;top:-10px;left:-10px;}
+  .about-corner-br{width:50px;height:50px;bottom:-10px;right:-10px;}
+
+  /* Services */
+  .srv-grid{grid-template-columns:1fr;}
+
+  /* Metrics */
+  .metrics{grid-template-columns:repeat(2,1fr);padding:2.5rem 5%;}
+  .metric-n{font-size:2.2rem;}
+
+  /* Why Us */
+  .why-grid{grid-template-columns:1fr;}
+  .why-card{padding:1.25rem 1.5rem;}
+
+  /* Process */
+  .proc-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .proc-grid::before{display:none;}
+
+  /* Testimonials */
+  .testi-grid{grid-template-columns:1fr;}
+
+  /* CTA Band */
+  .cta-band{grid-template-columns:1fr;gap:1.5rem;padding:3.5rem 5%;text-align:center;}
+  .cta-band a{justify-content:center;}
+
+  /* Footer */
+  .footer-main{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 5%;}
+  .footer-bottom{flex-direction:column;text-align:center;gap:.4rem;}
+}
+
+/* ──── RESPONSIVE — SMALL MOBILE (≤480px) ──── */
+@media(max-width:480px){
+  .hero h1{font-size:clamp(2rem,9vw,3rem);}
+  .hero-float{flex-direction:column;align-items:flex-start;}
+  .hero-float-card{width:100%;}
   .metrics{grid-template-columns:1fr 1fr;}
-  .hero h1{letter-spacing:-1px;}
+  .metric{padding:1.5rem 1rem;}
+  .proc-grid{grid-template-columns:1fr;}
+  .footer-main{grid-template-columns:1fr;}
+  .footer-brand{margin-bottom:.5rem;}
+  .srv-grid,.testi-grid,.why-grid{grid-template-columns:1fr;}
+  .top-bar{display:none;}/* hide entirely on very small screens */
+  .about-img{height:220px;}
+  /* Ticker — pause on small screens to avoid reflow */
+  .ticker-track{animation-duration:20s;}
 }
 </style>
 <style>
@@ -287,7 +379,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);}
 <!-- TOP BAR -->
 <div class="top-bar">
   <span>⚙️ West Africa's Precision Mould Manufacturer — Serving Industry Since 2010+</span>
-  <span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 View Our Workshop</a> &nbsp;·&nbsp; <a href="tel:+233000000000">📞 Call Now</a></span>
+  <span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 View Our Workshop</a> &nbsp;·&nbsp; <a href="tel:+233244631025">📞 Call Now</a></span>
 </div>
 
 <!-- NAV -->
@@ -481,7 +573,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);}
     </div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Injection Moulds</a></li><li><a href="services.html">Mould Design</a></li><li><a href="services.html">Custom Fabrication</a></li><li><a href="services.html">Prototyping</a></li><li><a href="services.html">Mould Repair</a></li><li><a href="services.html">Consultation</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Google Maps</a></li><li><a href="https://www.linkedin.com/company/metmofabric-engineering-services" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://wa.me/233000000000" target="_blank" rel="noopener">WhatsApp Business</a></li><li><a href="contact.html">Facebook</a></li><li><a href="contact.html">Email Us</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank">📍 Google Maps</a></li><li><a href="https://www.linkedin.com/company/metmofabric-engineering-services" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://wa.me/233244631025" target="_blank" rel="noopener">WhatsApp Business</a></li><li><a href="contact.html">Facebook</a></li><li><a href="contact.html">Email Us</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <p>© 2025 Metmofabric Engineering Services. All rights reserved.</p>
@@ -490,17 +582,35 @@ footer{background:var(--surface);border-top:1px solid var(--border);}
 </footer>
 
 <script>
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-},{threshold:.1});
-reveals.forEach(r => obs.observe(r));
+// Performant scroll reveal — GPU composited, unobserves after firing
+(function(){
+  // Respect reduced motion
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(prefersReduced){
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    return;
+  }
+  const obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target); // stop watching once revealed — reduces overhead
+      }
+    });
+  },{
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px' // trigger slightly before element enters view
+  });
+  document.querySelectorAll('.reveal').forEach(function(el){
+    obs.observe(el);
+  });
+})();
 </script>
 
 <!-- ═══════════════════ WHATSAPP FLOATING BUTTON ═══════════════════ -->
 <div class="wa-float">
   <span class="wa-tooltip">💬 Chat on WhatsApp</span>
-  <a class="wa-bubble" href="https://wa.me/233000000000?text=Hello%20Metmofabric%2C%20I%20would%20like%20to%20request%20a%20quote%20for..." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="wa-bubble" href="https://wa.me/233244631025?text=Hello%20Metmofabric%2C%20I%20would%20like%20to%20request%20a%20quote%20for..." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
