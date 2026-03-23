@@ -64,13 +64,13 @@ nav{position:sticky;top:0;z-index:999;background:rgba(14,15,17,.95);border-botto
 .drawer-cta{margin-top:.5rem;background:var(--orange)!important;color:var(--bg)!important;padding:1rem!important;border-radius:var(--radius);text-align:center;font-weight:700!important;font-size:1rem;border:none!important;}
 
 /* HERO */
-.hero{min-height:100svh;min-height:100vh;padding:clamp(5.5rem,14vw,9rem) clamp(1.25rem,5vw,5%) clamp(3rem,8vw,5rem);display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;position:relative;overflow:hidden;}
+.hero{min-height:100vh;min-height:100svh;padding:clamp(5.5rem,14vw,9rem) clamp(1.25rem,5vw,5%) clamp(3rem,8vw,5rem);display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 80% 50%,rgba(249,115,22,.07),transparent 65%);pointer-events:none;}
 .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.03) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
 .hero-left{position:relative;z-index:1;}
 .hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange-dim);border:1px solid var(--orange-border);color:var(--orange);padding:.28rem .9rem;border-radius:100px;font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;}
 .hero-tag::before{content:'';width:5px;height:5px;background:var(--orange);border-radius:50%;animation:blink 1.8s ease infinite;}
-.hero h1{font-family:var(--font-head);font-weight:800;font-size:clamp(3rem,5.5vw,5.25rem);color:var(--white);line-height:.95;letter-spacing:-1.5px;margin-bottom:1.4rem;}
+.hero h1{font-family:var(--font-head);font-weight:800;font-size:clamp(3rem,5.5vw,5.25rem);color:var(--white);line-height:1.0;letter-spacing:-1.5px;margin-bottom:1.4rem;}
 .hero h1 em{color:var(--orange);font-style:normal;display:block;}
 .hero-sub{font-size:clamp(.88rem,1.4vw,1rem);color:var(--muted);line-height:1.8;max-width:440px;margin-bottom:2rem;}
 .hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;}
@@ -88,7 +88,7 @@ nav{position:sticky;top:0;z-index:999;background:rgba(14,15,17,.95);border-botto
 .hero-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--orange),var(--amber));}
 .hp-label{font-size:.66rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:1.1rem;}
 .hp-row{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--border);font-size:.82rem;}
-.hp-row:last-of-type{border-bottom:none;}
+.hp-row.last{border-bottom:none;}
 .hp-key{color:var(--muted);}
 .hp-badge{padding:.15rem .6rem;border-radius:100px;font-size:.68rem;font-weight:600;}
 .badge-green{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#4ade80;}
@@ -143,13 +143,6 @@ nav{position:sticky;top:0;z-index:999;background:rgba(14,15,17,.95);border-botto
 .srv-more{display:inline-flex;align-items:center;gap:.35rem;color:var(--orange);font-size:.78rem;font-weight:600;margin-top:.9rem;transition:gap .2s;}
 .srv-more:hover{gap:.6rem;}
 
-/* METRICS */
-.metrics-band{background:var(--orange);display:grid;grid-template-columns:repeat(4,1fr);}
-.metric-item{padding:2rem 1.25rem;text-align:center;border-right:1px solid rgba(0,0,0,.12);}
-.metric-item:last-child{border-right:none;}
-.metric-n{font-family:var(--font-head);font-size:2.6rem;font-weight:800;color:var(--bg);line-height:1;}
-.metric-l{font-size:.68rem;font-weight:600;color:rgba(14,15,17,.62);letter-spacing:1px;text-transform:uppercase;margin-top:.25rem;}
-
 /* PROCESS */
 .proc-bg{background:var(--surface);}
 .proc-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;margin-top:2.75rem;position:relative;}
@@ -158,58 +151,29 @@ nav{position:sticky;top:0;z-index:999;background:rgba(14,15,17,.95);border-botto
 .proc-num{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--orange);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.85rem;color:var(--orange);margin:0 auto .9rem;background:var(--surface);position:relative;z-index:1;}
 .proc-step h4{font-family:var(--font-head);font-weight:700;font-size:.88rem;color:var(--white);margin-bottom:.3rem;}
 .proc-step p{font-size:.73rem;color:var(--muted);line-height:1.6;}
+.form-note a{color:var(--orange);text-decoration:underline;}
 
-/* TESTIMONIALS */
-.testi-bg{background:var(--bg);}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;}
-.testi-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;transition:border-color .25s;}
-.testi-card:hover{border-color:var(--orange-border);}
-.testi-stars{color:var(--amber);font-size:.78rem;letter-spacing:2px;margin-bottom:.9rem;}
-.testi-text{font-size:.84rem;color:var(--muted);line-height:1.8;margin-bottom:1.1rem;font-style:italic;}
-.testi-author{display:flex;align-items:center;gap:.65rem;}
-.testi-av{width:34px;height:34px;border-radius:50%;flex-shrink:0;background:var(--orange-dim);border:1.5px solid var(--orange-border);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:800;font-size:.75rem;color:var(--orange);}
-.testi-name{font-size:.8rem;font-weight:600;color:var(--white);}
-.testi-role{font-size:.7rem;color:var(--muted);}
-
-/* CONTACT */
-.contact-bg{background:var(--surface-2);border-top:1px solid var(--border);}
-.contact-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;}
-.contact-info p{font-size:.88rem;line-height:1.8;margin-bottom:1.75rem;}
+/* CONTACT INFO */
+.contact-info-wrap{background:var(--surface-2);border-top:1px solid var(--border);}
+.ci-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;}
 .cd-list{display:flex;flex-direction:column;gap:.85rem;margin-bottom:1.75rem;}
-.cd-item{display:flex;align-items:center;gap:.8rem;font-size:.85rem;}
-.cd-icon{width:36px;height:36px;border-radius:7px;flex-shrink:0;background:var(--orange-dim);border:1px solid var(--orange-border);display:flex;align-items:center;justify-content:center;font-size:.9rem;}
-.cd-text a{color:var(--white);font-weight:500;transition:color .2s;}
+.cd-item{display:flex;align-items:center;gap:.85rem;}
+.cd-icon{width:38px;height:38px;border-radius:8px;flex-shrink:0;background:var(--orange-dim);border:1px solid var(--orange-border);display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+.cd-text{display:flex;flex-direction:column;gap:.1rem;}
+.cd-label{font-size:.65rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);}
+.cd-text a{color:var(--white);font-weight:500;font-size:.87rem;transition:color .2s;}
 .cd-text a:hover{color:var(--orange);}
-.hours-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;}
-.hours-card h5{font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:.8rem;}
-.hours-row{display:flex;justify-content:space-between;padding:.38rem 0;border-bottom:1px solid var(--border);font-size:.8rem;}
-.hours-row:last-child{border:none;padding-bottom:0;}
+.hours-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:.85rem;}
+.hours-card h5{font-size:.65rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;}
+.hours-row{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px solid var(--border);font-size:.83rem;}
+.hours-row.last{border-bottom:none;padding-bottom:0;}
 .hours-day{color:var(--muted);}
 .hours-time{color:var(--white);font-weight:500;}
-
-/* Form */
-.form-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:clamp(1.4rem,3.5vw,2.25rem);}
-.form-card h3{font-family:var(--font-head);font-weight:800;font-size:1.45rem;color:var(--white);margin-bottom:.3rem;letter-spacing:-.5px;}
-.form-card>p{font-size:.8rem;color:var(--muted);margin-bottom:1.5rem;}
-.form-note{background:var(--orange-dim);border:1px solid var(--orange-border);border-radius:7px;padding:.65rem .9rem;font-size:.73rem;color:var(--orange);line-height:1.6;margin-bottom:1.35rem;}
-.form-note a{color:var(--orange);text-decoration:underline;}
-.cf{display:flex;flex-direction:column;gap:.9rem;}
-.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
-.cf-group{display:flex;flex-direction:column;gap:.35rem;}
-.cf-group label{font-size:.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--white);}
-.cf-group input,.cf-group textarea,.cf-group select{background:var(--bg);border:1.5px solid var(--border);border-radius:7px;padding:.72rem .9rem;font-family:var(--font-body);font-size:.84rem;color:var(--white);transition:border-color .2s;outline:none;width:100%;-webkit-appearance:none;}
-.cf-group input:focus,.cf-group textarea:focus,.cf-group select:focus{border-color:var(--orange);}
-.cf-group input::placeholder,.cf-group textarea::placeholder{color:var(--muted);}
-.cf-group textarea{min-height:110px;resize:vertical;}
-.cf-group select option{background:var(--surface);}
-.cf-submit{background:var(--orange);color:var(--bg);padding:.9rem;border-radius:8px;font-family:var(--font-head);font-weight:800;font-size:1rem;letter-spacing:.3px;border:none;cursor:pointer;width:100%;transition:background .2s,transform .15s;display:flex;align-items:center;justify-content:center;gap:.5rem;}
-.cf-submit:hover{background:var(--orange-dark);transform:translateY(-1px);}
-.cf-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
-.cf-success{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:1.75rem;text-align:center;display:none;}
-.cf-success .tick{font-size:2.25rem;margin-bottom:.65rem;}
-.cf-success h4{font-family:var(--font-head);font-weight:700;color:#4ade80;font-size:1.15rem;margin-bottom:.4rem;}
-.cf-success p{font-size:.82rem;color:var(--muted);}
-.cf-error{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:7px;padding:.65rem .9rem;font-size:.8rem;color:#f87171;display:none;margin-top:.5rem;}
+.response-badge{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;display:flex;align-items:flex-start;gap:.9rem;transition:border-color .2s;}
+.response-badge:hover{border-color:var(--orange-border);}
+.rb-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem;}
+.rb-title{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.2rem;}
+.rb-sub{font-size:.77rem;color:var(--muted);line-height:1.6;}
 
 /* FOOTER */
 .footer-bar{height:3px;background:linear-gradient(90deg,var(--orange),var(--amber),var(--orange));}
@@ -246,14 +210,9 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   .hero-right{display:none;}
   .hero h1{font-size:clamp(2.8rem,7vw,4.2rem);}
   .srv-grid{grid-template-columns:repeat(2,1fr);}
-  .testi-grid{grid-template-columns:repeat(2,1fr);}
   .proc-steps{grid-template-columns:repeat(3,1fr);}.proc-steps::before{display:none;}
-  .contact-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
-  .metrics-band{grid-template-columns:repeat(2,1fr);}
-  .metric-item{border-right:none;border-bottom:1px solid rgba(0,0,0,.1);}
-  .metric-item:nth-child(odd){border-right:1px solid rgba(0,0,0,.1);}
-  .metric-item:nth-child(3),.metric-item:nth-child(4){border-bottom:none;}
+  .ci-grid{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
   nav{height:60px;}
@@ -270,25 +229,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   .sec-hdr{margin-bottom:2rem;}
   .about-grid{grid-template-columns:1fr;gap:2rem;}
   .srv-grid{grid-template-columns:1fr;}
-  .testi-grid{grid-template-columns:1fr;}
   .proc-steps{grid-template-columns:1fr 1fr;gap:1.25rem;}.proc-steps::before{display:none;}
-  .metrics-band{grid-template-columns:1fr 1fr;}
-  .metric-item{padding:1.6rem 1rem;}
-  .metric-n{font-size:2.1rem;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:1.5rem;}
   .footer-btm{flex-direction:column;text-align:center;}
-  .cf-row{grid-template-columns:1fr;}
-  .contact-grid{gap:2rem;}
+  .ci-grid{grid-template-columns:1fr;gap:2rem;}
 }
 @media(max-width:480px){
   .hero{padding:4rem 1rem 2.5rem;}
   .hero h1{font-size:clamp(2rem,10vw,2.75rem);}
   .hero-stats{flex-direction:column;gap:.9rem;border-top:none;padding-top:1.25rem;}
   .proc-steps{grid-template-columns:1fr;}
-  .metrics-band{grid-template-columns:1fr;}
-  .metric-item:nth-child(odd){border-right:none;}
-  .metric-item{border-bottom:1px solid rgba(0,0,0,.1)!important;}
-  .metric-item:last-child{border-bottom:none!important;}
   .footer-grid{grid-template-columns:1fr;}
   .section{padding:2.5rem 1rem;}
 }
@@ -306,7 +256,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -317,7 +267,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <a href="portfolio.html">Portfolio</a>
-  <a href="#contact" class="drawer-cta" onclick="closeMenu()">Get a Free Quote</a>
+  <a href="contact.html" class="drawer-cta" onclick="closeMenu()">Get a Free Quote</a>
 </div>
 
 <!-- HERO -->
@@ -328,7 +278,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
     <h1>Engineering<em>Precision.</em>Delivering Results.</h1>
     <p class="hero-sub">Metmofabric Engineering Services manufactures world-class precision moulds for industrial clients across West Africa and beyond.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">→ Get a Free Quote</a>
+      <a href="contact.html" class="btn-primary">→ Get a Free Quote</a>
       <a href="services.html" class="btn-ghost">View Services</a>
       <a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" rel="noopener" class="btn-ghost">📍 Our Workshop</a>
     </div>
@@ -345,7 +295,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
       <div class="hp-row"><span class="hp-key">32-Cavity Cap Mould</span><span class="hp-badge badge-green">In Production</span></div>
       <div class="hp-row"><span class="hp-key">Automotive Trim Mould</span><span class="hp-badge badge-blue">QC Review</span></div>
       <div class="hp-row"><span class="hp-key">Medical Device Prototype</span><span class="hp-badge badge-amber">Design Phase</span></div>
-      <div class="hp-row"><span class="hp-key">Agricultural Fitting Set</span><span class="hp-badge badge-green">Delivered ✓</span></div>
+      <div class="hp-row last"><span class="hp-key">Agricultural Fitting Set</span><span class="hp-badge badge-green">Delivered ✓</span></div>
       <div class="hp-mini">
         <div class="hpm"><div class="hpm-icon">⚙️</div><div class="hpm-label">CNC Machining</div><div class="hpm-sub">±0.01mm tolerance</div></div>
         <div class="hpm"><div class="hpm-icon">🔬</div><div class="hpm-label">Quality Control</div><div class="hpm-sub">100% inspection</div></div>
@@ -422,14 +372,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   </div>
 </section>
 
-<!-- METRICS -->
-<div class="metrics-band">
-  <div class="metric-item reveal"><div class="metric-n">500+</div><div class="metric-l">Moulds Delivered</div></div>
-  <div class="metric-item reveal" style="transition-delay:.07s"><div class="metric-n">10+</div><div class="metric-l">Years Experience</div></div>
-  <div class="metric-item reveal" style="transition-delay:.14s"><div class="metric-n">98%</div><div class="metric-l">Client Satisfaction</div></div>
-  <div class="metric-item reveal" style="transition-delay:.21s"><div class="metric-n">50+</div><div class="metric-l">Active Clients</div></div>
-</div>
-
 <!-- PROCESS -->
 <section class="section proc-bg">
   <div class="sec-hdr center reveal">
@@ -446,80 +388,36 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section testi-bg">
-  <div class="sec-hdr center reveal">
-    <div class="sec-label">Client Reviews</div>
-    <h2 class="sec-title">Trusted by <em>Industry Leaders</em></h2>
-  </div>
-  <div class="testi-grid">
-    <div class="testi-card reveal"><div class="testi-stars">★★★★★</div><p class="testi-text">"Metmofabric delivered our injection moulds with exceptional precision. Quality exceeded expectations and they delivered ahead of schedule."</p><div class="testi-author"><div class="testi-av">AK</div><div><div class="testi-name">Ama Kofi</div><div class="testi-role">Production Manager, AK Industries</div></div></div></div>
-    <div class="testi-card reveal" style="transition-delay:.08s"><div class="testi-stars">★★★★★</div><p class="testi-text">"Professional, technically excellent, and great communicators. Our moulds have run flawlessly for over a year. Outstanding partner."</p><div class="testi-author"><div class="testi-av">SK</div><div><div class="testi-name">Samuel Kwame</div><div class="testi-role">CEO, Precision Parts Ltd</div></div></div></div>
-    <div class="testi-card reveal" style="transition-delay:.16s"><div class="testi-stars">★★★★★</div><p class="testi-text">"Unmatched attention to detail and commitment to quality. Metmofabric is now our exclusive manufacturing partner for all mould projects."</p><div class="testi-author"><div class="testi-av">EA</div><div><div class="testi-name">Emmanuel Asante</div><div class="testi-role">Operations Director, TechFab Ghana</div></div></div></div>
-  </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section class="section contact-bg" id="contact">
-  <div class="contact-grid">
+<!-- CONTACT INFO -->
+<section class="section contact-info-wrap" id="contact">
+  <div class="ci-grid">
     <div class="reveal">
       <div class="sec-label">Get In Touch</div>
-      <h2 class="sec-title">Request a <em>Free Quote</em></h2>
-      <p class="sec-body" style="margin-bottom:1.75rem">Tell us about your project and our engineering team will respond with a detailed, competitive proposal within 24 hours.</p>
+      <h2 class="sec-title">Let's Work <em>Together</em></h2>
+      <p class="sec-body" style="margin-bottom:2rem">Ready to start your next precision project? Reach out through any of the channels below or request a free quote and our team will respond within 24 hours.</p>
       <div class="cd-list">
-        <div class="cd-item"><div class="cd-icon">📞</div><div class="cd-text"><a href="tel:+233244631025">+233 244 631 025</a></div></div>
-        <div class="cd-item"><div class="cd-icon">✉️</div><div class="cd-text"><a href="mailto:info@metmofabric.com">info@metmofabric.com</a></div></div>
-        <div class="cd-item"><div class="cd-icon">📍</div><div class="cd-text"><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" rel="noopener">View Our Workshop on Google Maps</a></div></div>
-        <div class="cd-item"><div class="cd-icon">💬</div><div class="cd-text"><a href="https://wa.me/233244631025?text=Hello%20Metmofabric%2C%20I%20would%20like%20a%20quote%20for..." target="_blank" rel="noopener">Chat on WhatsApp</a></div></div>
+        <div class="cd-item"><div class="cd-icon">📞</div><div class="cd-text"><span class="cd-label">Phone</span><a href="tel:+233244631025">+233 244 631 025</a></div></div>
+        <div class="cd-item"><div class="cd-icon">✉️</div><div class="cd-text"><span class="cd-label">Email</span><a href="mailto:info@metmofabric.com">info@metmofabric.com</a></div></div>
+        <div class="cd-item"><div class="cd-icon">📍</div><div class="cd-text"><span class="cd-label">Location</span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" rel="noopener">View Our Workshop on Google Maps</a></div></div>
+        <div class="cd-item"><div class="cd-icon">💬</div><div class="cd-text"><span class="cd-label">WhatsApp</span><a href="https://wa.me/233244631025?text=Hello%20Metmofabric%2C%20I%20would%20like%20a%20quote%20for..." target="_blank" rel="noopener">Chat on WhatsApp</a></div></div>
       </div>
+      <a href="contact.html" class="btn-primary" style="margin-top:.5rem">→ Request a Free Quote</a>
+    </div>
+    <div class="reveal" style="transition-delay:.1s">
       <div class="hours-card">
         <h5>Business Hours</h5>
         <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 AM – 6:00 PM</span></div>
         <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9:00 AM – 2:00 PM</span></div>
-        <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></div>
+        <div class="hours-row last"><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></div>
       </div>
-    </div>
+      <div class="response-badge reveal" style="transition-delay:.2s">
+        <div class="rb-icon">⚡</div>
+        <div>
+          <div class="rb-title">Fast Response Guaranteed</div>
+          <div class="rb-sub">We respond to all enquiries within 24 hours on business days.</div>
+        </div>
+      </div>
 
-    <div class="form-card reveal" style="transition-delay:.1s">
-      <h3>Send Us a Message</h3>
-      <p>We'll respond within 24 hours with a detailed proposal.</p>
-      <div class="form-note">⚙️ <strong>Setup:</strong> Replace <code>YOUR_FORM_ID</code> in the form action with your <a href="https://formspree.io" target="_blank">Formspree</a> ID to receive emails.</div>
-      <div id="cfSuccess" class="cf-success">
-        <div class="tick">✅</div>
-        <h4>Message Received!</h4>
-        <p>Thank you for reaching out. We'll respond with a proposal within 24 hours.</p>
-      </div>
-      <div id="cfError" class="cf-error">Something went wrong. Please WhatsApp us directly on +233 244 631 025.</div>
-      <form class="cf" id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="_gotcha" style="display:none">
-        <input type="hidden" name="_subject" value="New Quote Request — Metmofabric Engineering Services">
-        <div class="cf-row">
-          <div class="cf-group"><label for="fname">Full Name *</label><input type="text" id="fname" name="name" placeholder="Your full name" required></div>
-          <div class="cf-group"><label for="fcomp">Company</label><input type="text" id="fcomp" name="company" placeholder="Your company"></div>
-        </div>
-        <div class="cf-row">
-          <div class="cf-group"><label for="femail">Email *</label><input type="email" id="femail" name="email" placeholder="you@company.com" required></div>
-          <div class="cf-group"><label for="ftel">Phone / WhatsApp</label><input type="tel" id="ftel" name="phone" placeholder="+233 244 631 025"></div>
-        </div>
-        <div class="cf-group">
-          <label for="fsvc">Service Required *</label>
-          <select id="fsvc" name="service" required>
-            <option value="">— Select a service —</option>
-            <option>Injection Mould Manufacturing</option>
-            <option>Mould Design & Engineering</option>
-            <option>Custom Fabrication</option>
-            <option>Prototype Development</option>
-            <option>Mould Repair & Maintenance</option>
-            <option>Engineering Consultation</option>
-            <option>Multiple Services</option>
-          </select>
-        </div>
-        <div class="cf-group">
-          <label for="fmsg">Project Description *</label>
-          <textarea id="fmsg" name="message" placeholder="Describe your project — mould type, material, dimensions, quantity, timeline..." required></textarea>
-        </div>
-        <button type="submit" class="cf-submit" id="cfBtn">⚙️ Send Quote Request</button>
-      </form>
     </div>
   </div>
 </section>
@@ -551,7 +449,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
         <li><a href="about.html">About Us</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -577,7 +475,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
-
 <script>
 function toggleMenu(){
   var btn=document.getElementById('hamburger');
@@ -595,36 +492,22 @@ document.querySelectorAll('.nav-drawer a:not(.drawer-cta)').forEach(function(a){
   a.addEventListener('click',closeMenu);
 });
 
-// Scroll reveal
+// Scroll reveal — GPU composited, unobserves after trigger
 (function(){
   if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});return;
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
+    return;
   }
   var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
   },{threshold:0.07,rootMargin:'0px 0px -36px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
 })();
-
-// Form
-var qf=document.getElementById('quoteForm');
-var cfBtn=document.getElementById('cfBtn');
-var cfSucc=document.getElementById('cfSuccess');
-var cfErr=document.getElementById('cfError');
-qf.addEventListener('submit',async function(e){
-  e.preventDefault();cfErr.style.display='none';
-  if(qf.action.includes('YOUR_FORM_ID')){
-    qf.style.display='none';cfSucc.style.display='block';
-    if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'conversion',event_label:'demo'});
-    return;
-  }
-  cfBtn.disabled=true;cfBtn.textContent='⏳ Sending...';
-  try{
-    var r=await fetch(qf.action,{method:'POST',body:new FormData(qf),headers:{Accept:'application/json'}});
-    if(r.ok){qf.style.display='none';cfSucc.style.display='block';if(typeof gtag!=='undefined')gtag('event','generate_lead',{event_category:'conversion',event_label:'quote_form'});}
-    else{throw new Error();}
-  }catch(ex){cfErr.style.display='block';cfBtn.disabled=false;cfBtn.textContent='⚙️ Send Quote Request';}
-});
 </script>
 </body>
 </html>
