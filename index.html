@@ -279,8 +279,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   </a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html" data-spy="about">About</a></li>
+    <li><a href="services.html" data-spy="services">Services</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
   </ul>
@@ -290,8 +290,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
 </nav>
 <div class="nav-drawer" id="navDrawer">
   <a href="index.html" class="active">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
+  <a href="about.html" data-spy="about">About</a>
+  <a href="services.html" data-spy="services">Services</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="contact.html" class="drawer-cta" onclick="closeMenu()">Get a Free Quote</a>
 </div>
@@ -535,26 +535,26 @@ document.querySelectorAll('.nav-drawer a:not(.drawer-cta)').forEach(function(a){
 
 // ── Scroll-spy navigation tracker ────────────────────────
 (function(){
-  // Map section IDs to nav link hrefs
-  var sections = [
-    {id:'about',   href:'#about'},
-    {id:'services',href:'#services'},
-    {id:'process', href:'#process'},
-    {id:'contact', href:'#contact'},
-  ];
+  // Section IDs to watch — must match id="" on the HTML sections
+  var sectionIds = ['about','services','process','contact'];
+  var navH = 64;
 
-  var navLinks  = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-  var drawLinks = document.querySelectorAll('.nav-drawer a:not(.drawer-cta)');
-  var navH      = 64; // nav height offset
+  // Grab all links that have a data-spy attribute (desktop + mobile)
+  var spyLinks = document.querySelectorAll('[data-spy]');
 
-  function clearSpy(links){
-    links.forEach(function(a){ a.classList.remove('spy-active'); });
-  }
+  function updateSpy(){
+    var scrollY = window.scrollY + navH + 100;
+    var current = null;
 
-  function setSpy(links, sectionId){
-    links.forEach(function(a){
-      var match = sections.find(function(s){ return s.id === sectionId; });
-      if(match && (a.getAttribute('href') === match.href || a.getAttribute('href') === 'index.html#' + sectionId)){
+    sectionIds.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.getBoundingClientRect().top + window.scrollY <= scrollY){
+        current = id;
+      }
+    });
+
+    spyLinks.forEach(function(a){
+      if(a.getAttribute('data-spy') === current){
         a.classList.add('spy-active');
       } else {
         a.classList.remove('spy-active');
@@ -562,27 +562,10 @@ document.querySelectorAll('.nav-drawer a:not(.drawer-cta)').forEach(function(a){
     });
   }
 
-  function onScroll(){
-    var scrollY = window.scrollY + navH + 80; // bias slightly ahead
-    var current = null;
-
-    sections.forEach(function(s){
-      var el = document.getElementById(s.id);
-      if(el && el.offsetTop <= scrollY){
-        current = s.id;
-      }
-    });
-
-    clearSpy(navLinks);
-    clearSpy(drawLinks);
-    if(current){
-      setSpy(navLinks,  current);
-      setSpy(drawLinks, current);
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll(); // run once on load
+  window.addEventListener('scroll', updateSpy, {passive:true});
+  // Run after page has fully laid out
+  window.addEventListener('load', updateSpy);
+  updateSpy();
 })();
 </script>
 </body>
