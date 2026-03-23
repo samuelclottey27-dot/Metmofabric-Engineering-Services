@@ -64,42 +64,22 @@ nav{position:sticky;top:0;z-index:999;background:rgba(14,15,17,.95);border-botto
 .drawer-cta{margin-top:.5rem;background:var(--orange)!important;color:var(--bg)!important;padding:1rem!important;border-radius:var(--radius);text-align:center;font-weight:700!important;font-size:1rem;border:none!important;}
 
 /* HERO */
-.hero{min-height:100vh;min-height:100svh;padding:clamp(5.5rem,14vw,9rem) clamp(1.25rem,5vw,5%) clamp(3rem,8vw,5rem);display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;position:relative;overflow:hidden;}
+.hero{min-height:100vh;min-height:100svh;padding:clamp(5.5rem,14vw,9rem) clamp(1.25rem,5vw,5%) clamp(3rem,8vw,5rem);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 80% 50%,rgba(249,115,22,.07),transparent 65%);pointer-events:none;}
 .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.03) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;}
-.hero-left{position:relative;z-index:1;}
+.hero-left{position:relative;z-index:1;max-width:680px;width:100%;}
 .hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange-dim);border:1px solid var(--orange-border);color:var(--orange);padding:.28rem .9rem;border-radius:100px;font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;}
 .hero-tag::before{content:'';width:5px;height:5px;background:var(--orange);border-radius:50%;animation:blink 1.8s ease infinite;}
 .hero h1{font-family:var(--font-head);font-weight:800;font-size:clamp(3rem,5.5vw,5.25rem);color:var(--white);line-height:1.0;letter-spacing:-1.5px;margin-bottom:1.4rem;}
 .hero h1 em{color:var(--orange);font-style:normal;display:block;}
-.hero-sub{font-size:clamp(.88rem,1.4vw,1rem);color:var(--muted);line-height:1.8;max-width:440px;margin-bottom:2rem;}
-.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;}
+.hero-sub{font-size:clamp(.88rem,1.4vw,1rem);color:var(--muted);line-height:1.8;max-width:520px;margin:0 auto 2rem;}
 .btn-primary{background:var(--orange);color:var(--bg);padding:.82rem 1.9rem;border-radius:8px;font-size:.88rem;font-weight:600;letter-spacing:.3px;transition:background .2s,transform .15s,box-shadow .2s;border:none;cursor:pointer;font-family:var(--font-body);display:inline-flex;align-items:center;gap:.45rem;}
 .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(249,115,22,.28);}
-.btn-ghost{background:transparent;color:var(--white);padding:.82rem 1.6rem;border-radius:8px;border:1px solid var(--border);font-size:.88rem;font-weight:500;transition:border-color .2s,color .2s;display:inline-flex;align-items:center;gap:.45rem;}
-.btn-ghost:hover{border-color:var(--orange-border);color:var(--orange);}
-.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border);flex-wrap:wrap;}
+.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border);flex-wrap:wrap;justify-content:center;}
 .hstat-n{font-family:var(--font-head);font-size:1.9rem;font-weight:800;color:var(--white);line-height:1;}
 .hstat-l{font-size:.68rem;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;margin-top:.15rem;}
 
 /* Hero right panel */
-.hero-right{position:relative;z-index:1;}
-.hero-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.75rem;position:relative;overflow:hidden;}
-.hero-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--orange),var(--amber));}
-.hp-label{font-size:.66rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:1.1rem;}
-.hp-row{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--border);font-size:.82rem;}
-.hp-row.last{border-bottom:none;}
-.hp-key{color:var(--muted);}
-.hp-badge{padding:.15rem .6rem;border-radius:100px;font-size:.68rem;font-weight:600;}
-.badge-green{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#4ade80;}
-.badge-amber{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.18);color:var(--amber);}
-.badge-blue{background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);color:#93c5fd;}
-.hp-mini{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.1rem;}
-.hpm{background:var(--surface-2);border:1px solid var(--border);border-radius:9px;padding:.9rem;transition:border-color .2s;}
-.hpm:hover{border-color:var(--orange-border);}
-.hpm-icon{font-size:1.1rem;margin-bottom:.4rem;}
-.hpm-label{font-size:.75rem;color:var(--white);font-weight:600;}
-.hpm-sub{font-size:.68rem;color:var(--muted);margin-top:.1rem;}
 
 /* TICKER */
 .ticker{background:var(--surface);border-top:1px solid var(--orange-border);border-bottom:1px solid var(--orange-border);padding:.65rem 0;overflow:hidden;}
@@ -169,11 +149,6 @@ nav{position:sticky;top:0;z-index:999;background:rgba(14,15,17,.95);border-botto
 .hours-row.last{border-bottom:none;padding-bottom:0;}
 .hours-day{color:var(--muted);}
 .hours-time{color:var(--white);font-weight:500;}
-.response-badge{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;display:flex;align-items:flex-start;gap:.9rem;transition:border-color .2s;}
-.response-badge:hover{border-color:var(--orange-border);}
-.rb-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem;}
-.rb-title{font-size:.85rem;font-weight:600;color:var(--white);margin-bottom:.2rem;}
-.rb-sub{font-size:.77rem;color:var(--muted);line-height:1.6;}
 
 /* FOOTER */
 .footer-bar{height:3px;background:linear-gradient(90deg,var(--orange),var(--amber),var(--orange));}
@@ -187,7 +162,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
 .footer-col a:hover{color:var(--white);}
 .footer-btm{border-top:1px solid var(--border);padding-top:1.1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;}
 .footer-btm p{font-size:.73rem;color:var(--muted);}
-.footer-btm .md{color:var(--orange);font-weight:600;}
 
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:22px;right:22px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:.45rem;}
@@ -207,8 +181,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .hero{grid-template-columns:1fr;gap:2rem;min-height:auto;padding-bottom:3.5rem;}
-  .hero-right{display:none;}
-  .hero h1{font-size:clamp(2.8rem,7vw,4.2rem);}
+    .hero h1{font-size:clamp(2.8rem,7vw,4.2rem);}
   .srv-grid{grid-template-columns:repeat(2,1fr);}
   .proc-steps{grid-template-columns:repeat(3,1fr);}.proc-steps::before{display:none;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
@@ -222,9 +195,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   .hero{padding:4.5rem 1.25rem 3rem;}
   .hero h1{font-size:clamp(2.2rem,9vw,3.4rem);letter-spacing:-1px;}
   .hero-sub{font-size:.88rem;}
-  .hero-actions{flex-direction:column;}
-  .hero-actions a{width:100%;justify-content:center;text-align:center;}
-  .hero-stats{gap:1.5rem;}
+      .hero-stats{gap:1.5rem;}
   .section{padding:3rem 1.25rem;}
   .sec-hdr{margin-bottom:2rem;}
   .about-grid{grid-template-columns:1fr;gap:2rem;}
@@ -303,31 +274,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
     <div class="hero-tag">Precision Mould Manufacturing · West Africa</div>
     <h1>Engineering<em>Precision.</em>Delivering Results.</h1>
     <p class="hero-sub">Metmofabric Engineering Services manufactures world-class precision moulds for industrial clients across West Africa and beyond.</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-primary">→ Get a Free Quote</a>
-      <a href="services.html" class="btn-ghost">View Services</a>
-      <a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" rel="noopener" class="btn-ghost">📍 Our Workshop</a>
-    </div>
     <div class="hero-stats">
-      <div><div class="hstat-n">500+</div><div class="hstat-l">Moulds Delivered</div></div>
       <div><div class="hstat-n">10+</div><div class="hstat-l">Years Experience</div></div>
       <div><div class="hstat-n">98%</div><div class="hstat-l">Client Satisfaction</div></div>
       <div><div class="hstat-n">50+</div><div class="hstat-l">Active Clients</div></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-panel reveal">
-      <div class="hp-label">Live Project Tracker</div>
-      <div class="hp-row"><span class="hp-key">32-Cavity Cap Mould</span><span class="hp-badge badge-green">In Production</span></div>
-      <div class="hp-row"><span class="hp-key">Automotive Trim Mould</span><span class="hp-badge badge-blue">QC Review</span></div>
-      <div class="hp-row"><span class="hp-key">Medical Device Prototype</span><span class="hp-badge badge-amber">Design Phase</span></div>
-      <div class="hp-row last"><span class="hp-key">Agricultural Fitting Set</span><span class="hp-badge badge-green">Delivered ✓</span></div>
-      <div class="hp-mini">
-        <div class="hpm"><div class="hpm-icon">⚙️</div><div class="hpm-label">CNC Machining</div><div class="hpm-sub">±0.01mm tolerance</div></div>
-        <div class="hpm"><div class="hpm-icon">🔬</div><div class="hpm-label">Quality Control</div><div class="hpm-sub">100% inspection</div></div>
-        <div class="hpm"><div class="hpm-icon">🚀</div><div class="hpm-label">Fast Turnaround</div><div class="hpm-sub">4–16 weeks</div></div>
-        <div class="hpm"><div class="hpm-icon">🛡️</div><div class="hpm-label">ISO Ready</div><div class="hpm-sub">Quality assured</div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -373,7 +323,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
         <div class="cl-item">Competitive pricing — quality without compromise</div>
         <div class="cl-item">On-time delivery with full aftercare support</div>
       </div>
-      <a href="about.html" class="btn-ghost" style="margin-top:1.75rem;display:inline-flex;">Learn More About Us →</a>
+      <a href="about.html" class="btn-primary" style="margin-top:1.75rem;display:inline-flex;background:transparent;border:1px solid var(--border);color:var(--white);">Learn More About Us →</a>
     </div>
   </div>
 </section>
@@ -423,7 +373,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
       <p class="sec-body" style="margin-bottom:2rem">Ready to start your next precision project? Reach out through any of the channels below or request a free quote and our team will respond within 24 hours.</p>
       <div class="cd-list">
         <div class="cd-item"><div class="cd-icon">📞</div><div class="cd-text"><span class="cd-label">Phone</span><a href="tel:+233244631025">+233 244 631 025</a></div></div>
-        <div class="cd-item"><div class="cd-icon">✉️</div><div class="cd-text"><span class="cd-label">Email</span><a href="/cdn-cgi/l/email-protection#2d44434b426d40485940424b4c4f5f444e034e4240"><span class="__cf_email__" data-cfemail="345d5a525b74595140595b525556465d571a575b59">[email&#160;protected]</span></a></div></div>
+        <div class="cd-item"><div class="cd-icon">✉️</div><div class="cd-text"><span class="cd-label">Email</span><a href="mailto:info@metmofabric.com">info@metmofabric.com</a></div></div>
         <div class="cd-item"><div class="cd-icon">📍</div><div class="cd-text"><span class="cd-label">Location</span><a href="https://maps.app.goo.gl/5V7FTMkmgV21UmpJA" target="_blank" rel="noopener">View Our Workshop on Google Maps</a></div></div>
         <div class="cd-item"><div class="cd-icon">💬</div><div class="cd-text"><span class="cd-label">WhatsApp</span><a href="https://wa.me/233244631025?text=Hello%20Metmofabric%2C%20I%20would%20like%20a%20quote%20for..." target="_blank" rel="noopener">Chat on WhatsApp</a></div></div>
       </div>
@@ -435,13 +385,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
         <div class="hours-row"><span class="hours-day">Monday – Friday</span><span class="hours-time">8:00 AM – 6:00 PM</span></div>
         <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">9:00 AM – 2:00 PM</span></div>
         <div class="hours-row last"><span class="hours-day">Sunday</span><span class="hours-time">Closed</span></div>
-      </div>
-      <div class="response-badge reveal" style="transition-delay:.2s">
-        <div class="rb-icon">⚡</div>
-        <div>
-          <div class="rb-title">Fast Response Guaranteed</div>
-          <div class="rb-sub">We respond to all enquiries within 24 hours on business days.</div>
-        </div>
       </div>
 
     </div>
@@ -490,7 +433,6 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
   </div>
   <div class="footer-btm">
     <p>© 2025 Metmofabric Engineering Services. All rights reserved.</p>
-    <p>MD: <span class="md">Mr. Clement N. C. Clottey</span></p>
   </div>
 </footer>
 
@@ -501,7 +443,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:2.75
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── Hamburger menu ────────────────────────────────────────
 function toggleMenu(){
   var btn=document.getElementById('hamburger');
