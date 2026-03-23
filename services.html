@@ -24,6 +24,12 @@ nav ul a:hover,nav ul a.active{color:var(--teal);}
 .nav-quote{border:1.5px solid var(--teal)!important;color:var(--teal)!important;padding:.5rem 1.4rem;border-radius:6px;font-weight:600!important;}
 .nav-quote:hover{background:var(--teal)!important;color:var(--bg)!important;}
 .nav-mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;}
+.stats-strip{display:flex;align-items:center;justify-content:center;gap:2rem;padding:2rem 5%;background:var(--teal);flex-wrap:wrap;}
+.ss-item{text-align:center;}
+.ss-n{font-family:var(--font-head);font-size:2.25rem;font-weight:800;color:var(--bg);display:block;line-height:1;}
+.ss-l{font-size:.72rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(17,18,20,.65);display:block;margin-top:.25rem;}
+.ss-div{width:1px;height:40px;background:rgba(17,18,20,.2);}
+@media(max-width:600px){.ss-div{display:none;}.stats-strip{gap:1.5rem;}}
 .page-hero{background:var(--surface);border-bottom:1px solid var(--border);padding:5rem 5% 4rem;position:relative;overflow:hidden;}
 .page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(249,115,22,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(249,115,22,.03) 1px,transparent 1px);background-size:60px 60px;}
 .page-hero-inner{position:relative;z-index:1;}
@@ -129,6 +135,16 @@ footer{background:var(--surface);border-top:1px solid var(--border);}
 </div>
 
 <!-- SERVICES DETAILED -->
+<div class="stats-strip">
+  <div class="ss-item"><span class="ss-n">500+</span><span class="ss-l">Moulds Delivered</span></div>
+  <div class="ss-div"></div>
+  <div class="ss-item"><span class="ss-n">10+</span><span class="ss-l">Years Experience</span></div>
+  <div class="ss-div"></div>
+  <div class="ss-item"><span class="ss-n">98%</span><span class="ss-l">Client Satisfaction</span></div>
+  <div class="ss-div"></div>
+  <div class="ss-item"><span class="ss-n">50+</span><span class="ss-l">Active Clients</span></div>
+</div>
+
 <section>
   <div class="reveal" style="margin-bottom:3rem">
     <div class="sec-label">What We Offer</div>
